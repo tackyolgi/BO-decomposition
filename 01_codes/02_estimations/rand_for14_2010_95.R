@@ -8,15 +8,15 @@ library(oaxaca)
 library(randomForestSRC)
 library(stringi)
 
-source('C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/01_codes/02_estimations/becslesek.R', encoding = 'UTF-8')
-setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/data")
+source('./01_codes/02_estimations/becslesek.R', encoding = 'UTF-8')
 
-tarifred <- readRDS("tarifred_10.RData")
+
+tarifred <- readRDS("./data/tarifred_10.RData")
 tarifred <- subset(tarifred, tarifred$lnker<quantile(tarifred$lnker, 0.95))
 obs_num <- 50000
 minta <- get_sample(tarifred, obs_num)
 
-saveRDS(minta, "minta_2010_95.RData")
+saveRDS(minta, "./data/minta_2010_95.RData")
 
 # parameters
 # random forest
@@ -24,30 +24,23 @@ num_tree <- 1000     # ntree
 num_vars <- 5      # mtry
 num_nodes <- 5    # nodesize
 
-source('C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/01_codes/02_estimations/becslesek.R', encoding = 'UTF-8')
+source('./01_codes/02_estimations/becslesek.R', encoding = 'UTF-8')
 
 
 # estimations
 set.seed(mean(minta$train$ev))
 
-B_regr_ordered <- get_B_oax_regr_ordered(minta$train) # rerun after RF in 2010
+B_regr_ordered <- get_B_oax_regr_ordered(minta$train)
 B_RF_female_ordered <- get_B_oax_RF_female_ordered(minta$train, num_vars, num_nodes, num_tree)
 B_RF_male_ordered <- get_B_oax_RF_male_ordered(minta$train, num_vars, num_nodes, num_tree)
 
-setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/data/models")
 
-saveRDS(B_regr_ordered, file="B_regr_ordered_2010_95.RData")
-saveRDS(B_RF_female_ordered, file="B_RF_female_ordered_2010_95.RData")
-saveRDS(B_RF_male_ordered, file="B_RF_male_ordered_2010_95.RData")
+saveRDS(B_regr_ordered, file="./models/B_regr_ordered_2010_95.RData")
+saveRDS(B_RF_female_ordered, file="./models/B_RF_female_ordered_2010_95.RData")
+saveRDS(B_RF_male_ordered, file="./models/B_RF_male_ordered_2010_95.RData")
 
-# unexplaind part
+# unexplained part
 # RF
-
-B_RF_female_ordered <- readRDS("B_RF_female_ordered_2010_95.RData")
-B_RF_male_ordered <- readRDS("B_RF_male_ordered_2010_95.RData")
-
-
-
 # RF predict
 minta$train$pred_B_RF_subgr_ordered[minta$train$nem==0] <- predict.rfsrc(B_RF_female_ordered, subset(minta$train, nem==0))$predicted
 minta$train$pred_B_RF_subgr_ordered[minta$train$nem==1] <- predict.rfsrc(B_RF_male_ordered, subset(minta$train, nem==1))$predicted
@@ -56,20 +49,6 @@ minta$test$pred_B_RF_subgr_ordered[minta$test$nem==1] <- predict.rfsrc(B_RF_male
 
 minta$train$pred_B_RF_subgr_ordered_male <- predict.rfsrc(B_RF_male_ordered, minta$train)$predicted
 minta$test$pred_B_RF_subgr_ordered_male <- predict.rfsrc(B_RF_male_ordered, minta$test)$predicted
-
-# regr predict
-minta$train$pred_B_regr_subgr_ordered[minta$train$nem==0] <- B_regr_ordered$reg$reg.A$fitted.values
-minta$train$pred_B_regr_subgr_ordered[minta$train$nem==1] <- B_regr_ordered$reg$reg.B$fitted.values
-
-minta$train$pred_B_regr_subgr_ordered_male[minta$train$nem==0] <- predict(B_regr_ordered$reg$reg.B, subset(minta$train, nem==0))
-minta$train$pred_B_regr_subgr_ordered_male[minta$train$nem==1] <- B_regr_ordered$reg$reg.B$fitted.values
-
-minta$test$pred_B_regr_subgr_ordered[minta$test$nem==0] <- predict(B_regr_ordered$reg$reg.A, subset(minta$test, nem==0))
-minta$test$pred_B_regr_subgr_ordered[minta$test$nem==1] <- predict(B_regr_ordered$reg$reg.B, subset(minta$test, nem==1))
-
-minta$test$pred_B_regr_subgr_ordered_male[minta$test$nem==0] <- predict(B_regr_ordered$reg$reg.B, subset(minta$test, nem==0))
-minta$test$pred_B_regr_subgr_ordered_male[minta$test$nem==1] <- predict(B_regr_ordered$reg$reg.B, subset(minta$test, nem==1))
-
 
 # differencies (pm(M)-pr(M)+pr(F)-pf(F)) male model is the reference model
 # diff in RF 
@@ -87,24 +66,7 @@ minta$test$pred_diff_B_RF_ordered[minta$test$nem==0] <- subset(minta$test$pred_B
                                                                  -minta$test$pred_B_RF_subgr_ordered,
                                                                  minta$test$nem==0)
 
-# diff at ols
-minta$train$pred_diff_B_regr_ordered[minta$train$nem==1] <- subset(minta$train$pred_B_regr_subgr_ordered- 
-                                                                   minta$train$pred_B_regr_subgr_ordered_male,
-                                                                 minta$train$nem==1)
-minta$train$pred_diff_B_regr_ordered[minta$train$nem==0] <- subset(minta$train$pred_B_regr_subgr_ordered_male
-                                                                 -minta$train$pred_B_regr_subgr_ordered,
-                                                                 minta$train$nem==0)
-
-minta$test$pred_diff_B_regr_ordered[minta$test$nem==1] <- subset(minta$test$pred_B_regr_subgr_ordered
-                                                               - minta$test$pred_B_regr_subgr_ordered_male,
-                                                               minta$test$nem==1)
-minta$test$pred_diff_B_regr_ordered[minta$test$nem==0] <- subset(minta$test$pred_B_regr_subgr_ordered_male
-                                                               -minta$test$pred_B_regr_subgr_ordered,
-                                                               minta$test$nem==0)
-
-
 # basic information
-#  results_RF <- matrix(0,1,6)
 # train
 # raw difference
 raw <- mean(subset(minta$train, nem==1)$lnker)-mean(subset(minta$train, nem==0)$lnker)
@@ -119,9 +81,10 @@ unexpl <- mean(subset(minta$train$pred_B_RF_subgr_ordered_male, minta$train$nem=
   mean(subset(minta$train$pred_B_RF_subgr_ordered,minta$train$nem==0))
 
 # results
-results_RF <- as.data.frame(rbind(results_RF, (cbind(modszer="RF", ev=mean(minta$train$ev), nyers=raw, magyarazott=expl, 
-                                                     nem_magyarazott=unexpl, 
-                                                     kulonbseg=raw-expl-unexpl))))
+results_RF <- as.data.frame(rbind(results_RF, (cbind( ev=mean(minta$train$ev), nyers=round(raw,4), 
+                                                      magyarazott=round(expl,4), 
+                                                     nem_magyarazott=round(unexpl,4), 
+                                                     kulonbseg=round(raw-expl-unexpl,4)))))
 
 # test
 # raw difference
@@ -137,50 +100,13 @@ unexpl <- mean(subset(minta$test$pred_B_RF_subgr_ordered_male, minta$test$nem==0
   mean(subset(minta$test$pred_B_RF_subgr_ordered,minta$test$nem==0))
 
 # results
-results_RF <- as.data.frame(rbind(results_RF, (cbind(modszer="RF", ev=mean(minta$test$ev), nyers=raw, magyarazott=expl, 
-                                                     nem_magyarazott=unexpl, 
-                                                     kulonbseg=raw-expl-unexpl))))
+results_RF <- as.data.frame(rbind(results_RF, (cbind( ev=mean(minta$test$ev), nyers=round(raw,4), 
+                                                      magyarazott=round(expl,4), 
+                                                     nem_magyarazott=round(unexpl,4), 
+                                                     kulonbseg=round(raw-expl-unexpl,4)))))
 
-# train
-# raw diff
-raw <- mean(subset(minta$train, nem==1)$lnker)-mean(subset(minta$train, nem==0)$lnker)
-
-# explained part
-expl <- mean(subset(minta$train$pred_B_regr_subgr_ordered_male, minta$train$nem==1))-
-  mean(subset(minta$train$pred_B_regr_subgr_ordered_male, minta$train$nem==0))
-
-
-# unexplained part
-unexpl <- mean(subset(minta$train$pred_B_regr_subgr_ordered_male, minta$train$nem==0))-
-  mean(subset(minta$train$pred_B_regr_subgr_ordered,minta$train$nem==0))
-
-# results
-results_RF <- as.data.frame(rbind(results_RF, (cbind(modszer="OLS", ev=mean(minta$train$ev), nyers=raw, magyarazott=expl, 
-                                                     nem_magyarazott=unexpl, 
-                                                     kulonbseg=raw-expl-unexpl))))
-
-# test
-# raw diff
-raw <- mean(subset(minta$test, nem==1)$lnker)-mean(subset(minta$test, nem==0)$lnker)
-
-# explained part
-expl <- mean(subset(minta$test$pred_B_regr_subgr_ordered_male, minta$test$nem==1))-
-  mean(subset(minta$test$pred_B_regr_subgr_ordered_male, minta$test$nem==0))
-
-
-# unexplained part
-unexpl <- mean(subset(minta$test$pred_B_regr_subgr_ordered_male, minta$test$nem==0))-
-  mean(subset(minta$test$pred_B_regr_subgr_ordered,minta$test$nem==0))
-
-# results
-results_RF <- as.data.frame(rbind(results_RF, (cbind(modszer="OLS", ev=mean(minta$test$ev), nyers=raw, magyarazott=expl, 
-                                                     nem_magyarazott=unexpl, 
-                                                     kulonbseg=raw-expl-unexpl))))
-
- 
 # save
-setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/data")
-saveRDS(minta, file="minta_2010_95.RData")
+saveRDS(minta, file="./data/minta_2010_95.RData")
 
 
 # size categorization
@@ -263,8 +189,7 @@ minta$test$feor_1 <- factor(minta$test$feor_1, ordered=FALSE)
 
 
 # export/import clusters
-setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/data")
-exp_kib <-read.csv("exp_kib.csv", sep=";")
+exp_kib <-read.csv("./data/exp_kib.csv", sep=";")
 names(exp_kib)<-c("ag1", "exp_kib", "exp_kib_class")
 
 minta$train <- merge(minta$train, exp_kib, by=c("ag1", "ag1"))
@@ -286,10 +211,5 @@ minta$train$kshreg_3 <- factor(minta$train$kshreg_3, ordered=FALSE)
 minta$test$kshreg_3 <- factor(minta$test$kshreg_3, ordered=FALSE)
 
 
-saveRDS(minta, file="minta_2010_95.RData")
-
-
-
-
-
+saveRDS(minta, file="./data/minta_2010_95.RData")
 

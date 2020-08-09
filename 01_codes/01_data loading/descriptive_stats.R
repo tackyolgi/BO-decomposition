@@ -1,16 +1,14 @@
 library(tidyverse)
 
-setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/data/results")
-
-minta_08<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_08.RData")
-minta_09<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_09.RData")
-minta_10<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_10.RData")
-minta_11<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_11.RData")
-minta_12<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_12.RData")
-minta_13<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_13.RData")
-minta_14<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_14.RData")
-minta_15<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_15.RData")
-minta_16<-readRDS("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note 2/data/tarifred_16.RData")
+minta_08<-readRDS("./data/tarifred_08.RData")
+minta_09<-readRDS("./data/tarifred_09.RData")
+minta_10<-readRDS("./data/tarifred_10.RData")
+minta_11<-readRDS("./data/tarifred_11.RData")
+minta_12<-readRDS("./data/tarifred_12.RData")
+minta_13<-readRDS("./data/tarifred_13.RData")
+minta_14<-readRDS("./data/tarifred_14.RData")
+minta_15<-readRDS("./data/tarifred_15.RData")
+minta_16<-readRDS("./data/tarifred_16.RData")
 
 desc_stat <- matrix(NA, 10, 4)
 desc_stat[1, ] <- c("Year", "No_of_obs", "Average_wage_gap", " Female_ratio_in_full_dataset") 
@@ -58,4 +56,4 @@ ggplot(desc_stat, aes(x=Year, y=as.numeric(Average_wage_gap), group=1))+
   geom_path()+
   labs(x="", y="")+ylim(0, 0.2)
 
-write.csv(desc_stat, "desc_stat.csv")
+write.csv(desc_stat, "./results/desc_stat.csv")
