@@ -4,7 +4,8 @@ library(rpart)
 library(rpart.plot)
 library(treeClust)
 
-minta <- readRDS("./data/minta_2008.RData")
+setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp")
+minta <- readRDS("./data/minta_2009.RData")
 
 cp_value <- 0.00005
 min_bucket <- 50
@@ -22,8 +23,6 @@ CART_train_B_RF_female_ordered <- rpart(pred_diff_B_RF_ordered~iskveg4_ordered  
                                                                             #, maxdepth = depth_value
                                         ), model=TRUE)
 CART_train_B_RF_female_ordered
-printcp(CART_train_B_RF_female_ordered)
-plotcp(CART_train_B_RF_female_ordered)
 
 cp_value <- 0.001 
 minbuck_value <- 100
@@ -37,9 +36,8 @@ CART_train_B_RF_female_ordered <- rpart(pred_diff_B_RF_ordered~iskveg4_ordered  
                                                                     # , maxdepth = depth_value
                                              ), model=TRUE)
 CART_train_B_RF_female_ordered
-rpart.plot(CART_train_B_RF_female_ordered, type=4, extra=101,
-           tweak = 3.5,  compress=FALSE,  fallen.leaves =FALSE, varlen=10)
 
-path.rpart(CART_train_B_RF_female_ordered, nodes=names(table(leaf.numbers(CART_train_B_RF_female_ordered))))
+cart_path <- path.rpart(CART_train_B_RF_female_ordered, nodes=names(table(leaf.numbers(CART_train_B_RF_female_ordered))))
 
-
+saveRDS(CART_train_B_RF_female_ordered, 
+        "./models/CART_2009.RData")
