@@ -60,4 +60,4 @@ pivot_kra <- as.data.frame(pivot_kra)
 
 names(pivot_kra) <-c("year", "dataset", "category", "RF", "no of obs.")
 
-write.csv(pivot_kra, "./results/pivot_kra.csv")
+write.csv(pivot_kra, "./results/ws effects/pivot_kra.csv")

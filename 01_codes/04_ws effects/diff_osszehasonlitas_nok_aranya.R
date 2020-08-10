@@ -125,7 +125,7 @@ pivot_nok_aranya <- as.data.frame(pivot_nok_aranya)
 
 names(pivot_nok_aranya) <-c("year", "dataset", "category", "RF", "no of obs.")
 
-write.csv(pivot_nok_aranya, "./results/pivot_nok_aranya.csv")
+write.csv(pivot_nok_aranya, "./results/ws effects/pivot_nok_aranya.csv")
 
 
 

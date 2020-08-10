@@ -35,14 +35,16 @@ results_RF_longer$year <- as.character(results_RF_longer$year)
 
 results_RF_longer$dataset <- factor(results_RF_longer$dataset,
                                     c("training", "test"))
+panel_label <- c(training="A", test="B")
 
 tiff("./results/figures/Fig1.tiff")
 ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   geom_bar(position="dodge", stat="identity")+
   scale_y_continuous(breaks=seq(-40, 140, 20))+
-  facet_grid(.~dataset)+ theme(legend.position = "bottom")+
+  facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+
-  theme(legend.title = element_blank())
+  theme(legend.title = element_blank())+
+  theme(strip.background = element_rect(fill="white"))
 dev.off()
 
 # figure 2
@@ -52,12 +54,13 @@ results_RF_longer <- results_RF %>% pivot_longer(cols=c("wage_structure_effect",
 results_RF_longer$dataset <- factor(results_RF_longer$dataset,
                                     c("training", "test"))
 
-tiff("./results/figures/S1.tiff")
+tiff("./results/figures/Fig2.tiff")
 ggplot(results_RF_longer, aes(x=year, y=value, color=raw_ws))+
   geom_line()+
-  facet_grid(.~dataset)+ theme(legend.position = "bottom")+
+  facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0, .17)+
-  theme(legend.title = element_blank())
+  theme(legend.title = element_blank())+
+  theme(strip.background = element_rect(fill="white"))
 dev.off()
 
 
@@ -67,81 +70,95 @@ source('./01_codes/04_ws effects/diff_osszehasonlitas_iskveg.R')
 
 pivot_iskveg4$dataset <- factor(pivot_iskveg4$dataset,
                                     c("training", "test"))
-# tiffelni kell
+tiff("./results/figures/Fig3.tiff")
 ggplot(pivot_iskveg4, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
-  geom_path()+facet_grid(.~dataset)+ theme(legend.position = "bottom")+
+  geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
-  theme(legend.title = element_blank())
+  theme(legend.title = element_blank())+
+  theme(strip.background = element_rect(fill="white"))
+dev.off()
 
 # age
 source('./01_codes/04_ws effects/diff_osszehasonlitas_kor.R')
 
 pivot_kor$dataset <- factor(pivot_kor$dataset,
                             c("training", "test"))
-# tiffelni kell
+tiff("./results/figures/Fig4.tiff")
 ggplot(pivot_kor, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
-  geom_path()+facet_grid(.~dataset)+ theme(legend.position = "bottom")+
+  geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
-  theme(legend.title = element_blank())  
+  theme(legend.title = element_blank())+
+  theme(strip.background = element_rect(fill="white"))  
+dev.off()
 
 # tenureship 
 source('./01_codes/04_ws effects/diff_osszehasonlitas_szolgho.R')
 
 pivot_szolgho$dataset <- factor(pivot_szolgho$dataset,
                             c("training", "test"))
-# tiffelni kell
+tiff("./results/figures/Fig5.tiff")
 ggplot(pivot_szolgho, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
-  geom_path()+facet_grid(.~dataset)+ theme(legend.position = "bottom")+
+  geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
-  theme(legend.title = element_blank())  
-
+  theme(legend.title = element_blank()) +
+  theme(strip.background = element_rect(fill="white")) 
+dev.off()
 
 # foreign ownership
 source('./01_codes/04_ws effects/diff_osszehasonlitas_kra_4.R')
   
 pivot_kra$dataset <- factor(pivot_kra$dataset,
                               c("training", "test"))
-# tiffelni kell
+tiff("./results/figures/Fig6.tiff")
 ggplot(pivot_kra, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
-  geom_path()+facet_grid(.~dataset)+ theme(legend.position = "bottom")+
+  geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
-  theme(legend.title = element_blank())  
-  
+  theme(legend.title = element_blank())+
+  theme(strip.background = element_rect(fill="white"))  
+dev.off()
+
+
 # state ownership
 source('./01_codes/04_ws effects/diff_osszehasonlitas_ara_4.R')
   
 pivot_ara$dataset <- factor(pivot_ara$dataset,
                                 c("training", "test"))
-# tiffelni kell
+tiff("./results/figures/Fig7.tiff")
 ggplot(pivot_ara, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
-  geom_path()+facet_grid(.~dataset)+ theme(legend.position = "bottom")+
+  geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
-  theme(legend.title = element_blank())
+  theme(legend.title = element_blank())+
+  theme(strip.background = element_rect(fill="white"))
+dev.off()
+
+
+# femaleness in occupations
+source('./01_codes/04_ws effects/diff_osszehasonlitas_nok_aranya.R')
+
+pivot_nok_aranya$dataset <- factor(pivot_nok_aranya$dataset,
+                                c("training", "test"))
+
+tiff("./results/figures/Fig8.tiff")
+ggplot(pivot_nok_aranya, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
+  geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
+  xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
+  theme(legend.title = element_blank())  +
+  theme(strip.background = element_rect(fill="white"))
+dev.off()
 
 # occupation - 1 digit
 source('./01_codes/04_ws effects/diff_osszehasonlitas_feor.R')
 
 pivot_feor$dataset <- factor(pivot_feor$dataset,
-                            c("training", "test"))
-# tiffelni kell
+                             c("training", "test"))
+
+tiff("./results/figures/Fig9.tiff")
 ggplot(pivot_feor, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
-  geom_path()+facet_grid(.~dataset)+ theme(legend.position = "bottom")+
+  geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
-  theme(legend.title = element_blank())  
-
-# femaleness in occupations
-
-source('./01_codes/04_ws effects/diff_osszehasonlitas_nok_aranya.R')
-
-pivot_nok_aranya$dataset <- factor(pivot_nok_aranya$dataset,
-                                c("training", "test"))
-# tiffelni kell
-ggplot(pivot_nok_aranya, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
-  geom_path()+facet_grid(.~dataset)+ theme(legend.position = "bottom")+
-  xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
-  theme(legend.title = element_blank())  
-
-  
+  theme(legend.title = element_blank())+
+  theme(strip.background = element_rect(fill="white"))  
+dev.off()
 
 # S1 figure
 source('./01_codes/02_estimations/rand_for14_2008_95.R')
@@ -160,7 +177,7 @@ names(results_RF) <- c("year", "raw", "composition_effect",
 
 results_RF <- cbind(results_RF, dataset=rep(c("training", "test"), 9))
 
-# table 3 and table 4 
+# just in case table 3 and table 4 for reduced dataset
 results_RF_training <- subset(results_RF, results_RF$dataset=="training")
 results_RF_test <- subset(results_RF, results_RF$dataset=="test")
 
@@ -184,8 +201,9 @@ tiff("./results/figures/S1_fig.tiff")
 ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   geom_bar(position="dodge", stat="identity")+
   scale_y_continuous(breaks=seq(-40, 140, 20))+
-  facet_grid(.~dataset)+ theme(legend.position = "none")+
-  xlab("")+ylab("")
+  facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "none")+
+  xlab("")+ylab("")+
+  theme(strip.background = element_rect(fill="white"))
 dev.off()
 
 

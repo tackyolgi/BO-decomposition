@@ -60,4 +60,4 @@ pivot_kor <- as.data.frame(pivot_kor)
 
 names(pivot_kor) <-c("year", "dataset", "category", "RF", "no of obs.")
 
-write.csv(pivot_kor, "./results/pivot_kor.csv")
+write.csv(pivot_kor, "./results/ws effects/pivot_kor.csv")

@@ -72,5 +72,5 @@ pivot_szolgho <- as.data.frame(pivot_szolgho)
 
 names(pivot_szolgho) <-c("year", "dataset", "category", "RF", "no of obs.", "quantiles")
 
-write.csv(pivot_szolgho, "./results/pivot_szolgho.csv")
+write.csv(pivot_szolgho, "./results/ws effects/pivot_szolgho.csv")
 

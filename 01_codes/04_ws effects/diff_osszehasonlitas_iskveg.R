@@ -60,4 +60,4 @@ pivot_iskveg4 <- as.data.frame(pivot_iskveg4)
 
 names(pivot_iskveg4) <-c("year", "dataset", "category", "RF", "no of obs.")
 
-write.csv(pivot_iskveg4, "./results/pivot_iskveg4.csv")
+write.csv(pivot_iskveg4, "./results/ws effects/pivot_iskveg4.csv")

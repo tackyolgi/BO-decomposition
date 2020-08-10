@@ -60,4 +60,4 @@ pivot_feor <- as.data.frame(pivot_feor)
 
 names(pivot_feor) <-c("year", "dataset", "category", "RF", "no of obs.")
 
-write.csv(pivot_feor, "./results/pivot_feor.csv")
+write.csv(pivot_feor, "./results/ws effects/pivot_feor.csv")

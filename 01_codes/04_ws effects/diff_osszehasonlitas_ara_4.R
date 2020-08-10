@@ -60,4 +60,4 @@ pivot_ara <- as.data.frame(pivot_ara)
 
 names(pivot_ara) <-c("year", "dataset", "category", "RF", "no of obs.")
 
-write.csv(pivot_ara, "./results/pivot_ara.csv")
+write.csv(pivot_ara, "./results/ws effects/pivot_ara.csv")
