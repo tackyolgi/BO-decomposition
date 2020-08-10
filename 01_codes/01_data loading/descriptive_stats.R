@@ -52,8 +52,4 @@ desc_stat <- as.data.frame(desc_stat)
 names(desc_stat) <- desc_stat[1, ]
 desc_stat <- desc_stat[-1, ]
 
-ggplot(desc_stat, aes(x=Year, y=as.numeric(Average_wage_gap), group=1))+ 
-  geom_path()+
-  labs(x="", y="")+ylim(0, 0.2)
-
 write.csv(desc_stat, "./results/desc_stat.csv")
