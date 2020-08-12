@@ -3,47 +3,165 @@ library(tidyverse)
 library(modeest)
 
 # H group
-# Sector: Manufacturing, Region: transdanubian, property: foreign majority (1,2), education: primary and lower secondary (1-2)
+# Sector: Manufacturing, Region: transdanubian, 
+# property: foreign majority (1,2),
+# education: primary and lower secondary (1-2)
 
 # L group:
-# Region: central, Sector: not-manufacturing, firm size: 1-2, education: higher secondary and tertiary (3-4), no foreign property (4)
+# Region: central, Sector: not-manufacturing, firm size: 1-2
+# education: higher secondary and tertiary (3-4), 
+# no foreign property (4)
 # Size 1,2
 
+source("./01_codes/03_carts/get_H_and_L_groups.R")
+source("./01_codes/03_carts/get_characteristics.R")
+
+total_matrix <- matrix(NA, 16, 11)
+total_matrix[,1] <- c("WS effect", "n",
+               "Age", "Tenure", "Education", "Occupation", "Foreign", "State",
+               "Firm size", "Settlement", "Region", "Industry", "Collective agr",
+               "Coll agr in industry", "Coll agr some firms", "Any collective agr")
+
+L_group_matrix <- matrix(NA, 16, 11)
+L_group_matrix[,1] <- c("WS effect", "n",
+               "Age", "Tenure", "Education", "Occupation", "Foreign", "State",
+               "Firm size", "Settlement", "Region", "Industry", "Collective agr",
+               "Coll agr in industry", "Coll agr some firms", "Any collective agr")
+
+H_group_matrix <- matrix(NA, 16, 11)
+H_group_matrix[,1] <- c("WS effect", "n",
+               "Age", "Tenure", "Education", "Occupation", "Foreign", "State",
+               "Firm size", "Settlement", "Region", "Industry", "Collective agr",
+               "Coll agr in industry", "Coll agr some firms", "Any collective agr")
 
 
-setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/data")
-minta <- readRDS("minta_2016.RData")
+minta <- readRDS("./data/minta_2008.RData")
 
-source("C:/Users/tacky/OneDrive - Corvinus University of Budapest/Bertarifa kutatas/bertarifa/codes/CARTs_csoportok_fun03.R")
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
 
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
 
-csak_nok <- subset(minta$train, minta$train$nem == "0")
-pivot <- kimutatas(csak_nok)
-
-setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/data/results")
-write.csv(pivot, "pivot_2016.csv")
-
-
-level_data_H1 <- subset(minta$train, minta$train$nem =="0" & 
-                         minta$train$exp_kib_class == 2 &
-                         minta$train$kshreg_3 == 2 &
-                         (minta$train$kra_ordered == 1 | minta$train$kra_ordered ==2) &
-                         (minta$train$iskveg4_ordered == 1 | minta$train$iskveg4_ordered ==2)
-                       )
-
-level_data_L3 <- subset(minta$train, minta$train$nem == "0" & 
-                         minta$train$exp_kib_class != 2 &
-                         minta$train$kshreg_3 == 1 &
-                         minta$train$kra_ordered == 4 &
-                         (minta$train$vallmeret == 1 | minta$train$vallmeret==2) &
-                         (minta$train$iskveg4_ordered == 3 | minta$train$iskveg4_ordered ==4)
-                       )
+total_matrix[, 1:2] <- pivot_total[, 1:2]
+H_group_matrix[, 1:2] <- pivot_H[, 1:2]
+L_group_matrix[, 1:2] <- pivot_L[, 1:2]
 
 
-pivot_H1 <- kimutatas(level_data_H1)
+minta <- readRDS("./data/minta_2009.RData")
 
-pivot_L1 <- kimutatas(level_data_L3)
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
+
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
+
+total_matrix[, 3] <- pivot_total[, 2]
+H_group_matrix[, 3] <- pivot_H[, 2]
+L_group_matrix[, 3] <- pivot_L[, 2]
+
+minta <- readRDS("./data/minta_2010.RData")
+
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
+
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
+
+total_matrix[, 4] <- pivot_total[, 2]
+H_group_matrix[, 4] <- pivot_H[, 2]
+L_group_matrix[, 4] <- pivot_L[, 2]
+
+minta <- readRDS("./data/minta_2011.RData")
+
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
+
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
+
+total_matrix[, 5] <- pivot_total[, 2]
+H_group_matrix[, 5] <- pivot_H[, 2]
+L_group_matrix[, 5] <- pivot_L[, 2]
+
+minta <- readRDS("./data/minta_2012.RData")
+
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
+
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
+
+total_matrix[, 6] <- pivot_total[, 2]
+H_group_matrix[, 6] <- pivot_H[, 2]
+L_group_matrix[, 6] <- pivot_L[, 2]
+
+minta <- readRDS("./data/minta_2013.RData")
+
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
+
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
+
+total_matrix[, 7] <- pivot_total[, 2]
+H_group_matrix[, 7] <- pivot_H[, 2]
+L_group_matrix[, 7] <- pivot_L[, 2]
 
 
-write.csv(pivot_H1, "pivot_H_2016.csv")
-write.csv(pivot_L1, "pivot_L_2016.csv")
+minta <- readRDS("./data/minta_2014.RData")
+
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
+
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
+
+total_matrix[, 8] <- pivot_total[, 2]
+H_group_matrix[, 8] <- pivot_H[, 2]
+L_group_matrix[, 8] <- pivot_L[, 2]
+
+minta <- readRDS("./data/minta_2015.RData")
+
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
+
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
+
+total_matrix[, 9] <- pivot_total[, 2]
+H_group_matrix[, 9] <- pivot_H[, 2]
+L_group_matrix[, 9] <- pivot_L[, 2]
+
+minta <- readRDS("./data/minta_2016.RData")
+
+only_women <- subset(minta$train, minta$train$nem == "0")
+pivot_total <- get_characteristics(only_women)
+
+groups <- get_H_and_L_groups(only_women)
+pivot_H <- get_characteristics(groups$H_group)
+pivot_L <- get_characteristics(groups$L_group)
+
+total_matrix[, 10:11] <- pivot_total[, 2:3]
+H_group_matrix[, 10:11] <- pivot_H[, 2:3]
+L_group_matrix[, 10:11] <- pivot_L[, 2:3]
+
+total_matrix <- as.data.frame(total_matrix)
+H_group_matrix <- as.data.frame(H_group_matrix)
+L_group_matrix <- as.data.frame(L_group_matrix)
+
+names(total_matrix) <- c("variables", seq(2008,2016), "aggregate")
+names(H_group_matrix) <- c("variables", seq(2008,2016), "aggregate")
+names(L_group_matrix) <- c("variables", seq(2008,2016), "aggregate")
+
+write.csv(total_matrix, "./results/CARTs/total_matrix.csv")
+write.csv(H_group_matrix, "./results/CARTs/H_group_matrix.csv")
+write.csv(L_group_matrix, "./results/CARTs/L_group_matrix.csv")
