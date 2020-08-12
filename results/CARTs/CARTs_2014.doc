@@ -11,9 +11,9 @@
 
 <meta name="author" content="tacky" />
 
-<meta name="date" content="2020-08-10" />
+<meta name="date" content="2020-08-11" />
 
-<title>CARTs_2011.R</title>
+<title>CARTs_2014.R</title>
 
 <script>/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l="1.11.3",m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:"",length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||m.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&&(j&&c&&(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&&m.isArray(a)?a:[]):f=a&&m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&&(g[d]=c));return g},m.extend({expando:"jQuery"+(l+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===m.type(a)},isArray:Array.isArray||function(a){return"array"===m.type(a)},isWindow:function(a){return null!=a&&a==a.window},isNumeric:function(a){return!m.isArray(a)&&a-parseFloat(a)+1>=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||"object"!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&&!j.call(a,"constructor")&&!j.call(a.constructor.prototype,"isPrototypeOf"))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?h[i.call(a)]||"object":typeof a},globalEval:function(b){b&&m.trim(b)&&(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.replace(o,"ms-").replace(p,q)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b,c){var d,e=0,f=a.length,g=r(a);if(c){if(g){for(;f>e;e++)if(d=b.apply(a[e],c),d===!1)break}else for(e in a)if(d=b.apply(a[e],c),d===!1)break}else if(g){for(;f>e;e++)if(d=b.call(a[e],e,a[e]),d===!1)break}else for(e in a)if(d=b.call(a[e],e,a[e]),d===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(n,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(r(Object(a))?m.merge(c,"string"==typeof a?[a]:a):f.call(c,a)),c},inArray:function(a,b,c){var d;if(b){if(g)return g.call(b,a,c);for(d=b.length,c=c?0>c?Math.max(0,d+c):c:0;d>c;c++)if(c in b&&b[c]===a)return c}return-1},merge:function(a,b){var c=+b.length,d=0,e=a.length;while(c>d)a[e++]=b[d++];if(c!==c)while(void 0!==b[d])a[e++]=b[d++];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,f=0,g=a.length,h=r(a),i=[];if(h)for(;g>f;f++)d=b(a[f],f,c),null!=d&&i.push(d);else for(f in a)d=b(a[f],f,c),null!=d&&i.push(d);return e.apply([],i)},guid:1,proxy:function(a,b){var c,e,f;return"string"==typeof b&&(f=a[b],b=a,a=f),m.isFunction(a)?(c=d.call(arguments,2),e=function(){return a.apply(b||this,c.concat(d.call(arguments)))},e.guid=a.guid=a.guid||m.guid++,e):void 0},now:function(){return+new Date},support:k}),m.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(a,b){h["[object "+b+"]"]=b.toLowerCase()});function r(a){var b="length"in a&&a.length,c=m.type(a);return"function"===c||m.isWindow(a)?!1:1===a.nodeType&&b?!0:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var s=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ha(),z=ha(),A=ha(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N=M.replace("w","w#"),O="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+N+"))|)"+L+"*\\]",P=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+O+")*)|.*)\\)|)",Q=new RegExp(L+"+","g"),R=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),S=new RegExp("^"+L+"*,"+L+"*"),T=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),U=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),V=new RegExp(P),W=new RegExp("^"+N+"$"),X={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M.replace("w","w*")+")"),ATTR:new RegExp("^"+O),PSEUDO:new RegExp("^"+P),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},Y=/^(?:input|select|textarea|button)$/i,Z=/^h\d$/i,$=/^[^{]+\{\s*\[native \w/,_=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,aa=/[+~]/,ba=/'|\\/g,ca=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),da=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},ea=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(fa){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function ga(a,b,d,e){var f,h,j,k,l,o,r,s,w,x;if((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,d=d||[],k=b.nodeType,"string"!=typeof a||!a||1!==k&&9!==k&&11!==k)return d;if(!e&&p){if(11!==k&&(f=_.exec(a)))if(j=f[1]){if(9===k){if(h=b.getElementById(j),!h||!h.parentNode)return d;if(h.id===j)return d.push(h),d}else if(b.ownerDocument&&(h=b.ownerDocument.getElementById(j))&&t(b,h)&&h.id===j)return d.push(h),d}else{if(f[2])return H.apply(d,b.getElementsByTagName(a)),d;if((j=f[3])&&c.getElementsByClassName)return H.apply(d,b.getElementsByClassName(j)),d}if(c.qsa&&(!q||!q.test(a))){if(s=r=u,w=b,x=1!==k&&a,1===k&&"object"!==b.nodeName.toLowerCase()){o=g(a),(r=b.getAttribute("id"))?s=r.replace(ba,"\\$&"):b.setAttribute("id",s),s="[id='"+s+"'] ",l=o.length;while(l--)o[l]=s+ra(o[l]);w=aa.test(a)&&pa(b.parentNode)||b,x=o.join(",")}if(x)try{return H.apply(d,w.querySelectorAll(x)),d}catch(y){}finally{r||b.removeAttribute("id")}}}return i(a.replace(R,"$1"),b,d,e)}function ha(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ia(a){return a[u]=!0,a}function ja(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ka(a,b){var c=a.split("|"),e=a.length;while(e--)d.attrHandle[c[e]]=b}function la(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function na(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function oa(a){return ia(function(b){return b=+b,ia(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function pa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=ga.support={},f=ga.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=ga.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=g.documentElement,e=g.defaultView,e&&e!==e.top&&(e.addEventListener?e.addEventListener("unload",ea,!1):e.attachEvent&&e.attachEvent("onunload",ea)),p=!f(g),c.attributes=ja(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ja(function(a){return a.appendChild(g.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=$.test(g.getElementsByClassName),c.getById=ja(function(a){return o.appendChild(a).id=u,!g.getElementsByName||!g.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c&&c.parentNode?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ca,da);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=$.test(g.querySelectorAll))&&(ja(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\f]' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ja(function(a){var b=g.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=$.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ja(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",P)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=$.test(o.compareDocumentPosition),t=b||$.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===g||a.ownerDocument===v&&t(v,a)?-1:b===g||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,h=[a],i=[b];if(!e||!f)return a===g?-1:b===g?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return la(a,b);c=a;while(c=c.parentNode)h.unshift(c);c=b;while(c=c.parentNode)i.unshift(c);while(h[d]===i[d])d++;return d?la(h[d],i[d]):h[d]===v?-1:i[d]===v?1:0},g):n},ga.matches=function(a,b){return ga(a,null,null,b)},ga.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(U,"='$1']"),!(!c.matchesSelector||!p||r&&r.test(b)||q&&q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return ga(b,n,null,[a]).length>0},ga.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},ga.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},ga.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},ga.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=ga.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=ga.selectors={cacheLength:50,createPseudo:ia,match:X,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ca,da),a[3]=(a[3]||a[4]||a[5]||"").replace(ca,da),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||ga.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&ga.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return X.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&V.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ca,da).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=ga.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(Q," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h;if(q){if(f){while(p){l=b;while(l=l[p])if(h?l.nodeName.toLowerCase()===r:1===l.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){k=q[u]||(q[u]={}),j=k[a]||[],n=j[0]===w&&j[1],m=j[0]===w&&j[2],l=n&&q.childNodes[n];while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if(1===l.nodeType&&++m&&l===b){k[a]=[w,n,m];break}}else if(s&&(j=(b[u]||(b[u]={}))[a])&&j[0]===w)m=j[1];else while(l=++n&&l&&l[p]||(m=n=0)||o.pop())if((h?l.nodeName.toLowerCase()===r:1===l.nodeType)&&++m&&(s&&((l[u]||(l[u]={}))[a]=[w,m]),l===b))break;return m-=e,m===d||m%d===0&&m/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||ga.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ia(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ia(function(a){var b=[],c=[],d=h(a.replace(R,"$1"));return d[u]?ia(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ia(function(a){return function(b){return ga(a,b).length>0}}),contains:ia(function(a){return a=a.replace(ca,da),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ia(function(a){return W.test(a||"")||ga.error("unsupported lang: "+a),a=a.replace(ca,da).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Z.test(a.nodeName)},input:function(a){return Y.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:oa(function(){return[0]}),last:oa(function(a,b){return[b-1]}),eq:oa(function(a,b,c){return[0>c?c+b:c]}),even:oa(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:oa(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:oa(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:oa(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=ma(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=na(b);function qa(){}qa.prototype=d.filters=d.pseudos,d.setFilters=new qa,g=ga.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=S.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=T.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(R," ")}),h=h.slice(c.length));for(g in d.filter)!(e=X[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?ga.error(a):z(a,i).slice(0)};function ra(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function sa(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(i=b[u]||(b[u]={}),(h=i[d])&&h[0]===w&&h[1]===f)return j[2]=h[2];if(i[d]=j,j[2]=a(b,c,g))return!0}}}function ta(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ua(a,b,c){for(var d=0,e=b.length;e>d;d++)ga(a,b[d],c);return c}function va(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function wa(a,b,c,d,e,f){return d&&!d[u]&&(d=wa(d)),e&&!e[u]&&(e=wa(e,f)),ia(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ua(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:va(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=va(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=va(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function xa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=sa(function(a){return a===b},h,!0),l=sa(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[sa(ta(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return wa(i>1&&ta(m),i>1&&ra(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(R,"$1"),c,e>i&&xa(a.slice(i,e)),f>e&&xa(a=a.slice(e)),f>e&&ra(a))}m.push(c)}return ta(m)}function ya(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,m,o,p=0,q="0",r=f&&[],s=[],t=j,u=f||e&&d.find.TAG("*",k),v=w+=null==t?1:Math.random()||.1,x=u.length;for(k&&(j=g!==n&&g);q!==x&&null!=(l=u[q]);q++){if(e&&l){m=0;while(o=a[m++])if(o(l,g,h)){i.push(l);break}k&&(w=v)}c&&((l=!o&&l)&&p--,f&&r.push(l))}if(p+=q,c&&q!==p){m=0;while(o=b[m++])o(r,s,g,h);if(f){if(p>0)while(q--)r[q]||s[q]||(s[q]=F.call(i));s=va(s)}H.apply(i,s),k&&!f&&s.length>0&&p+b.length>1&&ga.uniqueSort(i)}return k&&(w=v,j=t),r};return c?ia(f):f}return h=ga.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=xa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,ya(e,d)),f.selector=a}return f},i=ga.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ca,da),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=X.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ca,da),aa.test(j[0].type)&&pa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&ra(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,aa.test(a)&&pa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ja(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ja(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ka("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ja(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ka("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ja(function(a){return null==a.getAttribute("disabled")})||ka(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),ga}(a);m.find=s,m.expr=s.selectors,m.expr[":"]=m.expr.pseudos,m.unique=s.uniqueSort,m.text=s.getText,m.isXMLDoc=s.isXML,m.contains=s.contains;var t=m.expr.match.needsContext,u=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,v=/^.[^:#\[\.,]*$/;function w(a,b,c){if(m.isFunction(b))return m.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return m.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(v.test(b))return m.filter(b,a,c);b=m.filter(b,a)}return m.grep(a,function(a){return m.inArray(a,b)>=0!==c})}m.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?m.find.matchesSelector(d,a)?[d]:[]:m.find.matches(a,m.grep(b,function(a){return 1===a.nodeType}))},m.fn.extend({find:function(a){var b,c=[],d=this,e=d.length;if("string"!=typeof a)return this.pushStack(m(a).filter(function(){for(b=0;e>b;b++)if(m.contains(d[b],this))return!0}));for(b=0;e>b;b++)m.find(a,d[b],c);return c=this.pushStack(e>1?m.unique(c):c),c.selector=this.selector?this.selector+" "+a:a,c},filter:function(a){return this.pushStack(w(this,a||[],!1))},not:function(a){return this.pushStack(w(this,a||[],!0))},is:function(a){return!!w(this,"string"==typeof a&&t.test(a)?m(a):a||[],!1).length}});var x,y=a.document,z=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,A=m.fn.init=function(a,b){var c,d;if(!a)return this;if("string"==typeof a){if(c="<"===a.charAt(0)&&">"===a.charAt(a.length-1)&&a.length>=3?[null,a,null]:z.exec(a),!c||!c[1]&&b)return!b||b.jquery?(b||x).find(a):this.constructor(b).find(a);if(c[1]){if(b=b instanceof m?b[0]:b,m.merge(this,m.parseHTML(c[1],b&&b.nodeType?b.ownerDocument||b:y,!0)),u.test(c[1])&&m.isPlainObject(b))for(c in b)m.isFunction(this[c])?this[c](b[c]):this.attr(c,b[c]);return this}if(d=y.getElementById(c[2]),d&&d.parentNode){if(d.id!==c[2])return x.find(a);this.length=1,this[0]=d}return this.context=y,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):m.isFunction(a)?"undefined"!=typeof x.ready?x.ready(a):a(m):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),m.makeArray(a,this))};A.prototype=m.fn,x=m(y);var B=/^(?:parents|prev(?:Until|All))/,C={children:!0,contents:!0,next:!0,prev:!0};m.extend({dir:function(a,b,c){var d=[],e=a[b];while(e&&9!==e.nodeType&&(void 0===c||1!==e.nodeType||!m(e).is(c)))1===e.nodeType&&d.push(e),e=e[b];return d},sibling:function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c}}),m.fn.extend({has:function(a){var b,c=m(a,this),d=c.length;return this.filter(function(){for(b=0;d>b;b++)if(m.contains(this,c[b]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=t.test(a)||"string"!=typeof a?m(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&m.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?m.unique(f):f)},index:function(a){return a?"string"==typeof a?m.inArray(this[0],m(a)):m.inArray(a.jquery?a[0]:a,this):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(m.unique(m.merge(this.get(),m(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function D(a,b){do a=a[b];while(a&&1!==a.nodeType);return a}m.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return m.dir(a,"parentNode")},parentsUntil:function(a,b,c){return m.dir(a,"parentNode",c)},next:function(a){return D(a,"nextSibling")},prev:function(a){return D(a,"previousSibling")},nextAll:function(a){return m.dir(a,"nextSibling")},prevAll:function(a){return m.dir(a,"previousSibling")},nextUntil:function(a,b,c){return m.dir(a,"nextSibling",c)},prevUntil:function(a,b,c){return m.dir(a,"previousSibling",c)},siblings:function(a){return m.sibling((a.parentNode||{}).firstChild,a)},children:function(a){return m.sibling(a.firstChild)},contents:function(a){return m.nodeName(a,"iframe")?a.contentDocument||a.contentWindow.document:m.merge([],a.childNodes)}},function(a,b){m.fn[a]=function(c,d){var e=m.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=m.filter(d,e)),this.length>1&&(C[a]||(e=m.unique(e)),B.test(a)&&(e=e.reverse())),this.pushStack(e)}});var E=/\S+/g,F={};function G(a){var b=F[a]={};return m.each(a.match(E)||[],function(a,c){b[c]=!0}),b}m.Callbacks=function(a){a="string"==typeof a?F[a]||G(a):m.extend({},a);var b,c,d,e,f,g,h=[],i=!a.once&&[],j=function(l){for(c=a.memory&&l,d=!0,f=g||0,g=0,e=h.length,b=!0;h&&e>f;f++)if(h[f].apply(l[0],l[1])===!1&&a.stopOnFalse){c=!1;break}b=!1,h&&(i?i.length&&j(i.shift()):c?h=[]:k.disable())},k={add:function(){if(h){var d=h.length;!function f(b){m.each(b,function(b,c){var d=m.type(c);"function"===d?a.unique&&k.has(c)||h.push(c):c&&c.length&&"string"!==d&&f(c)})}(arguments),b?e=h.length:c&&(g=d,j(c))}return this},remove:function(){return h&&m.each(arguments,function(a,c){var d;while((d=m.inArray(c,h,d))>-1)h.splice(d,1),b&&(e>=d&&e--,f>=d&&f--)}),this},has:function(a){return a?m.inArray(a,h)>-1:!(!h||!h.length)},empty:function(){return h=[],e=0,this},disable:function(){return h=i=c=void 0,this},disabled:function(){return!h},lock:function(){return i=void 0,c||k.disable(),this},locked:function(){return!i},fireWith:function(a,c){return!h||d&&!i||(c=c||[],c=[a,c.slice?c.slice():c],b?i.push(c):j(c)),this},fire:function(){return k.fireWith(this,arguments),this},fired:function(){return!!d}};return k},m.extend({Deferred:function(a){var b=[["resolve","done",m.Callbacks("once memory"),"resolved"],["reject","fail",m.Callbacks("once memory"),"rejected"],["notify","progress",m.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return m.Deferred(function(c){m.each(b,function(b,f){var g=m.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&m.isFunction(a.promise)?a.promise().done(c.resolve).fail(c.reject).progress(c.notify):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?m.extend(a,d):d}},e={};return d.pipe=d.then,m.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=d.call(arguments),e=c.length,f=1!==e||a&&m.isFunction(a.promise)?e:0,g=1===f?a:m.Deferred(),h=function(a,b,c){return function(e){b[a]=this,c[a]=arguments.length>1?d.call(arguments):e,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(e>1)for(i=new Array(e),j=new Array(e),k=new Array(e);e>b;b++)c[b]&&m.isFunction(c[b].promise)?c[b].promise().done(h(b,k,c)).fail(g.reject).progress(h(b,j,i)):--f;return f||g.resolveWith(k,c),g.promise()}});var H;m.fn.ready=function(a){return m.ready.promise().done(a),this},m.extend({isReady:!1,readyWait:1,holdReady:function(a){a?m.readyWait++:m.ready(!0)},ready:function(a){if(a===!0?!--m.readyWait:!m.isReady){if(!y.body)return setTimeout(m.ready);m.isReady=!0,a!==!0&&--m.readyWait>0||(H.resolveWith(y,[m]),m.fn.triggerHandler&&(m(y).triggerHandler("ready"),m(y).off("ready")))}}});function I(){y.addEventListener?(y.removeEventListener("DOMContentLoaded",J,!1),a.removeEventListener("load",J,!1)):(y.detachEvent("onreadystatechange",J),a.detachEvent("onload",J))}function J(){(y.addEventListener||"load"===event.type||"complete"===y.readyState)&&(I(),m.ready())}m.ready.promise=function(b){if(!H)if(H=m.Deferred(),"complete"===y.readyState)setTimeout(m.ready);else if(y.addEventListener)y.addEventListener("DOMContentLoaded",J,!1),a.addEventListener("load",J,!1);else{y.attachEvent("onreadystatechange",J),a.attachEvent("onload",J);var c=!1;try{c=null==a.frameElement&&y.documentElement}catch(d){}c&&c.doScroll&&!function e(){if(!m.isReady){try{c.doScroll("left")}catch(a){return setTimeout(e,50)}I(),m.ready()}}()}return H.promise(b)};var K="undefined",L;for(L in m(k))break;k.ownLast="0"!==L,k.inlineBlockNeedsLayout=!1,m(function(){var a,b,c,d;c=y.getElementsByTagName("body")[0],c&&c.style&&(b=y.createElement("div"),d=y.createElement("div"),d.style.cssText="position:absolute;border:0;width:0;height:0;top:0;left:-9999px",c.appendChild(d).appendChild(b),typeof b.style.zoom!==K&&(b.style.cssText="display:inline;margin:0;border:0;padding:1px;width:1px;zoom:1",k.inlineBlockNeedsLayout=a=3===b.offsetWidth,a&&(c.style.zoom=1)),c.removeChild(d))}),function(){var a=y.createElement("div");if(null==k.deleteExpando){k.deleteExpando=!0;try{delete a.test}catch(b){k.deleteExpando=!1}}a=null}(),m.acceptData=function(a){var b=m.noData[(a.nodeName+" ").toLowerCase()],c=+a.nodeType||1;return 1!==c&&9!==c?!1:!b||b!==!0&&a.getAttribute("classid")===b};var M=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,N=/([A-Z])/g;function O(a,b,c){if(void 0===c&&1===a.nodeType){var d="data-"+b.replace(N,"-$1").toLowerCase();if(c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:M.test(c)?m.parseJSON(c):c}catch(e){}m.data(a,b,c)}else c=void 0}return c}function P(a){var b;for(b in a)if(("data"!==b||!m.isEmptyObject(a[b]))&&"toJSON"!==b)return!1;
@@ -363,9 +363,9 @@ summary {
 
 
 
-<h1 class="title toc-ignore">CARTs_2011.R</h1>
+<h1 class="title toc-ignore">CARTs_2014.R</h1>
 <h4 class="author">tacky</h4>
-<h4 class="date">2020-08-10</h4>
+<h4 class="date">2020-08-11</h4>
 
 </div>
 
@@ -377,7 +377,7 @@ library(rpart.plot)
 library(treeClust)
 
 setwd(&quot;C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp&quot;)
-minta &lt;- readRDS(&quot;./data/minta_2011.RData&quot;)
+minta &lt;- readRDS(&quot;./data/minta_2014.RData&quot;)
 
 cp_value &lt;- 0.00005
 min_bucket &lt;- 50
@@ -395,418 +395,384 @@ CART_train_B_RF_female_ordered &lt;- rpart(pred_diff_B_RF_ordered~iskveg4_ordere
                                                                             #, maxdepth = depth_value
                                         ), model=TRUE)
 CART_train_B_RF_female_ordered</code></pre>
-<pre><code>## n= 20119 
+<pre><code>## n= 18638 
 ## 
 ## node), split, n, deviance, yval
 ##       * denotes terminal node
 ## 
-##     1) root 20119 727.7830000  0.150352400  
-##       2) exp_kib_class=1,3,4 13391 476.0781000  0.121033100  
-##         4) kra_ordered=3,4 10027 346.7392000  0.106070200  
-##           8) vallmeret=1 3409 124.1173000  0.071499600  
-##            16) iskveg4_ordered=3,4 2568 108.5899000  0.055247510  
-##              32) iskveg4_ordered=1,2,3 1840  63.9311100  0.027691530  
-##                64) kshreg_3=1,2 1231  46.9058700  0.015600470  
-##                 128) ara_ordered=1 73   3.3848750 -0.082362450 *
-##                 129) ara_ordered=2,3,4 1158  42.7762700  0.021776020  
-##                   258) kor_csop=2,3,4,5 1083  41.1779300  0.018304370  
-##                     516) szolgho_csop=4 198   8.9700380 -0.006825610  
-##                      1032) ttip=2 99   3.8222310 -0.032301070 *
-##                      1033) ttip=1,3 99   5.0193050  0.018649850 *
-##                     517) szolgho_csop=1,2,3 885  32.0548800  0.023926670  
-##                      1034) exp_kib_class=3 52   1.8138800 -0.035177290 *
-##                      1035) exp_kib_class=1,4 833  30.0480100  0.027616230  
-##                        2070) kshreg_3=1 559  19.9737500  0.018410400  
-##                          4140) szolgho_csop=1,2 390  14.1962800  0.005892452  
-##                            8280) exp_kib_class=4 199   8.9816320 -0.007879323  
-##                             16560) szolgho_csop=1 77   3.6242740 -0.045022840 *
-##                             16561) szolgho_csop=2,3,4 122   5.1840770  0.015563710 *
-##                            8281) exp_kib_class=1 191   5.1375770  0.020241050  
-##                             16562) kor_csop=3,4,5 107   3.2925840  0.004255081 *
-##                             16563) kor_csop=1,2 84   1.7828170  0.040604140 *
-##                          4141) szolgho_csop=3,4 169   5.5753380  0.047297990  
-##                            8282) ttip=2,3 57   1.7290130 -0.005295806 *
-##                            8283) ttip=1 112   3.6084150  0.074064470 *
-##                        2071) kshreg_3=2 274   9.9302340  0.046397470  
-##                          4142) szolgho_csop=2,3,4 192   6.0034180  0.011148660  
-##                            8284) ttip=2 138   4.2653860 -0.022937750 *
-##                            8285) ttip=3 54   1.1679340  0.098258370 *
-##                          4143) szolgho_csop=1 82   3.1296900  0.128931300 *
-##                   259) kor_csop=1 75   1.3967980  0.071906650 *
-##                65) kshreg_3=3 609  16.4815000  0.052131760  
-##                 130) exp_kib_class=3 90   1.8370690 -0.013996570 *
-##                 131) exp_kib_class=1,4 519  14.1826200  0.063599100  
-##                   262) kollszerz=0 463  12.8994500  0.056116340  
-##                     524) exp_kib_class=1 169   3.1880050  0.022028840 *
-##                     525) exp_kib_class=4 294   9.4021930  0.075710860  
-##                      1050) szolgho_csop=4 75   3.6192390  0.017803320 *
-##                      1051) szolgho_csop=1,2,3 219   5.4453290  0.095542210  
-##                        2102) kor_csop=3,4,5 133   2.3601950  0.078354950 *
-##                        2103) kor_csop=1,2 86   2.9850860  0.122122500 *
-##                   263) kollszerz=1 56   1.0429100  0.125465500 *
-##              33) iskveg4_ordered=4 728  39.7302700  0.124894500  
-##                66) kollszerz=0 619  30.6256300  0.097908490  
-##                 132) ttip=1,3 378  18.6605600  0.059158160  
-##                   264) kor_csop=4,5 72   6.3593650 -0.016101620 *
-##                   265) kor_csop=1,2,3 306  11.7974300  0.076866340  
-##                     530) kor_csop=1,2 193   5.8457990  0.050286540  
-##                      1060) szolgho_csop=1 70   2.2990330  0.029403020 *
-##                      1061) szolgho_csop=2,3,4 123   3.4988640  0.062171460 *
-##                     531) kor_csop=3,4,5 113   5.5823920  0.122263700 *
-##                 133) ttip=2 241  10.5072100  0.158687000  
-##                   266) kor_csop=4,5 68   4.5790200  0.076248660 *
-##                   267) kor_csop=1,2,3 173   5.2844100  0.191090500  
-##                     534) kshreg_3=1,2 90   3.2350460  0.148525700 *
-##                     535) kshreg_3=3 83   1.7094930  0.237245300 *
-##                67) kollszerz=1 109   6.0939080  0.278145200 *
-##            17) iskveg4_ordered=1,2 841  12.7780200  0.121125500  
-##              34) ttip=1 148   2.4143380  0.059406570 *
-##              35) ttip=2,3 693   9.6795120  0.134306400  
-##                70) ara_ordered=4 629   8.0690080  0.128600300  
-##                 140) exp_kib_class=3 77   1.0995870  0.099323510 *
-##                 141) exp_kib_class=1,4 552   6.8942150  0.132684200  
-##                   282) szolgho_csop=1 200   1.6184830  0.119581900  
-##                     564) kshreg_3=2 90   0.4508461  0.104099300 *
-##                     565) kshreg_3=1,3 110   1.1284120  0.132249400 *
-##                   283) szolgho_csop=2,3,4 352   5.2218890  0.140128800  
-##                     566) szolgho_csop=4 75   1.1227680  0.119633300 *
-##                     567) szolgho_csop=1,2,3 277   4.0590860  0.145678100  
-##                      1134) kshreg_3=1,3 188   3.0284370  0.135357800 *
-##                      1135) kshreg_3=2 89   0.9683293  0.167478200 *
-##                71) ara_ordered=1,2,3 64   1.3887440  0.190386800 *
-##           9) vallmeret=2,3,4 6618 216.4491000  0.123877900  
-##            18) exp_kib_class=4 4222 138.4993000  0.104987700  
-##              36) iskveg4_ordered=1,2,3 3355  95.4142800  0.094815590  
-##                72) iskveg4_ordered=3,4 2391  72.5492300  0.079132350  
-##                 144) kshreg_3=1,3 1857  59.8452100  0.067711970  
-##                   288) vallmeret=1,2,3 649  25.1214400  0.037627460  
-##                     576) kshreg_3=1 427  18.3710700  0.017052500  
-##                      1152) kor_csop=3,4,5 273  13.1757600 -0.005040235  
-##                        2304) ttip=2,3 111   4.0933150 -0.056124460 *
-##                        2305) ttip=1 162   8.5943020  0.029961920  
-##                          4610) szolgho_csop=3,4 87   5.2930280  0.008935158 *
-##                          4611) szolgho_csop=1,2 75   3.2181900  0.054352970 *
-##                      1153) kor_csop=1,2 154   4.8258550  0.056216900  
-##                        2306) szolgho_csop=1 64   1.6695870  0.034382570 *
-##                        2307) szolgho_csop=2,3,4 90   3.1040600  0.071743540 *
-##                     577) kshreg_3=3 222   6.2219220  0.077201810  
-##                      1154) szolgho_csop=4 77   2.6838980  0.006945238 *
-##                      1155) szolgho_csop=1,2,3 145   2.9561230  0.114510500 *
-##                   289) vallmeret=4 1208  33.8208000  0.083874920  
-##                     578) ara_ordered=1,2,3 906  23.0005200  0.066545790  
-##                      1156) szolgho_csop=1,2 244   6.2776200  0.045088520  
-##                        2312) kor_csop=1,2,3 164   3.3971020  0.027440800  
-##                          4624) ttip=1,3 98   2.6397620  0.008024591 *
-##                          4625) ttip=2 66   0.6655374  0.056270940 *
-##                        2313) kor_csop=4,5 80   2.7247350  0.081266350 *
-##                      1157) szolgho_csop=3,4 662  16.5691500  0.074454510  
-##                        2314) szolgho_csop=4 503  13.5661700  0.066292250  
-##                          4628) kor_csop=5 115   2.8551620  0.048377750 *
-##                          4629) kor_csop=1,2,3,4 388  10.6631700  0.071601960  
-##                            9258) kshreg_3=3 212   3.9394000  0.060581930  
-##                             18516) kor_csop=1,2,3 96   1.5363640  0.012928280 *
-##                             18517) kor_csop=4,5 116   2.0046150  0.100019400 *
-##                            9259) kshreg_3=1 176   6.6670090  0.084876090  
-##                             18518) ttip=3 106   5.0399540  0.057891920 *
-##                             18519) ttip=1,2 70   1.4329940  0.125737800 *
-##                        2315) szolgho_csop=1,2,3 159   2.8634530  0.100276000  
-##                          4630) kshreg_3=3 57   0.5829067  0.074573470 *
-##                          4631) kshreg_3=1 102   2.2218480  0.114639200 *
-##                     579) ara_ordered=4 302   9.7319960  0.135862300  
-##                      1158) szolgho_csop=1 103   1.9550320  0.088109780 *
-##                      1159) szolgho_csop=2,3,4 199   7.4205260  0.160578400  
-##                        2318) kor_csop=3,4,5 134   3.9273350  0.124983000 *
-##                        2319) kor_csop=1,2 65   2.9733930  0.233959900 *
-##                 145) kshreg_3=2 534  11.6195600  0.118847000  
-##                   290) vallmeret=1,2 118   4.2261570  0.081295390 *
-##                   291) vallmeret=3,4 416   7.1798120  0.129498700  
-##                     582) ara_ordered=1,2,3 300   3.5657590  0.101847100  
-##                      1164) ttip=2 250   2.8850460  0.092564310  
-##                        2328) ara_ordered=2,3,4 51   0.6169213  0.068048160 *
-##                        2329) ara_ordered=1 199   2.2296160  0.098847340 *
-##                      1165) ttip=3 50   0.5514591  0.148260800 *
-##                     583) ara_ordered=4 116   2.7914330  0.201011600 *
-##                73) iskveg4_ordered=1,2 964  20.8183000  0.133714600  
-##                 146) szolgho_csop=1,2 636  10.5611700  0.100073200  
-##                   292) ttip=3 305   3.9427940  0.073292870  
-##                     584) szolgho_csop=2,3,4 85   1.5294690  0.039513990 *
-##                     585) szolgho_csop=1 220   2.2788670  0.086343810  
-##                      1170) iskveg4_ordered=2,3,4 96   1.0920420  0.059156850 *
-##                      1171) iskveg4_ordered=1 124   1.0609340  0.107391800 *
-##                   293) ttip=1,2 331   6.1980710  0.124750000  
-##                     586) szolgho_csop=1 190   3.6614400  0.103363300  
-##                      1172) kor_csop=1,2,3 118   1.7872570  0.084923550 *
-##                      1173) kor_csop=4,5 72   1.7683040  0.133583900 *
-##                     587) szolgho_csop=2,3,4 141   2.3326220  0.153569000 *
-##                 147) szolgho_csop=3,4 328   8.1416560  0.198946000  
-##                   294) ara_ordered=1,2,3 144   2.7860530  0.132268700 *
-##                   295) ara_ordered=4 184   4.2143660  0.251128300  
-##                     590) kshreg_3=1 88   2.5590320  0.217573000 *
-##                     591) kshreg_3=2,3 96   1.4654230  0.281887300 *
-##              37) iskveg4_ordered=4 867  41.3945800  0.144350200  
-##                74) kra_ordered=4 779  32.1301200  0.128688900  
-##                 148) szolgho_csop=3,4 373  14.4867300  0.095107630  
-##                   296) ara_ordered=1 171   5.4397370  0.060989110  
-##                     592) szolgho_csop=4 115   3.7663140  0.045927120 *
-##                     593) szolgho_csop=1,2,3 56   1.5937570  0.091919960 *
-##                   297) ara_ordered=2,3,4 202   8.6794290  0.123990100  
-##                     594) kor_csop=1,2 69   2.5691230  0.041541370 *
-##                     595) kor_csop=3,4,5 133   5.3979170  0.166764300 *
-##                 149) szolgho_csop=1,2 406  16.8363100  0.159540600  
-##                   298) kshreg_3=1 275  13.3506200  0.132509400  
-##                     596) kollszerz=0 129   5.5661070  0.100485600 *
-##                     597) kollszerz=1 146   7.5353320  0.160804400 *
-##                   299) kshreg_3=2,3 131   2.8629340  0.216285700 *
-##                75) kra_ordered=1,2,3 88   7.3819830  0.282988400 *
-##            19) exp_kib_class=1,3 2396  73.7884100  0.157164300  
-##              38) kshreg_3=1 1100  30.7322100  0.119104200  
-##                76) kollszerz=1 236  11.1784800  0.075090750  
-##                 152) ara_ordered=3,4 103   7.0929420  0.007133796 *
-##                 153) ara_ordered=1,2 133   3.2414900  0.127719100 *
-##                77) kollszerz=0 864  18.9716900  0.131126400  
-##                 154) kor_csop=1,2 342   7.0703460  0.111397300  
-##                   308) vallmeret=4 201   3.2611300  0.101917500  
-##                     616) iskveg4_ordered=1,2 74   0.6131864  0.074128210 *
-##                     617) iskveg4_ordered=3,4 127   2.5575000  0.118109600 *
-##                   309) vallmeret=1,2,3 141   3.7654040  0.124911000 *
-##                 155) kor_csop=3,4,5 522  11.6810000  0.144052300  
-##                   310) vallmeret=1,2 128   4.8845390  0.123028100 *
-##                   311) vallmeret=3,4 394   6.7215070  0.150882500  
-##                     622) vallmeret=4 289   3.5464050  0.142342700  
-##                      1244) iskveg4_ordered=1 52   0.2376548  0.105868200 *
-##                      1245) iskveg4_ordered=2,3,4 237   3.2243920  0.150345500 *
-##                     623) vallmeret=1,2,3 105   3.0960140  0.174387400 *
-##              39) kshreg_3=2,3 1296  40.1103100  0.189468500  
-##                78) vallmeret=1,2,3 969  22.9303200  0.153473000  
-##                 156) vallmeret=1,2 575  12.9309700  0.129625800  
-##                   312) exp_kib_class=3 230   5.5040590  0.089553580  
-##                     624) kshreg_3=2 105   2.3801200  0.050403970 *
-##                     625) kshreg_3=3 125   2.8278230  0.122439300 *
-##                   313) exp_kib_class=1 345   6.8113610  0.156340600  
-##                     626) szolgho_csop=1,2,3 245   4.3948830  0.136649700  
-##                      1252) szolgho_csop=1,2 167   2.1611650  0.127123100  
-##                        2504) iskveg4_ordered=1,2 76   0.5353727  0.107715900 *
-##                        2505) iskveg4_ordered=3,4 91   1.5732610  0.143331400 *
-##                      1253) szolgho_csop=3,4 78   2.1861120  0.157046300 *
-##                     627) szolgho_csop=4 100   2.0887490  0.204583200 *
-##                 157) vallmeret=3,4 394   9.1951410  0.188275400  
-##                   314) ara_ordered=1,2 117   2.7823170  0.137138300 *
-##                   315) ara_ordered=3,4 277   5.9776380  0.209874800  
-##                     630) iskveg4_ordered=1,2 141   2.2321150  0.171658700 *
-##                     631) iskveg4_ordered=3,4 136   3.3261000  0.249495900 *
-##                79) vallmeret=4 327  12.2040200  0.296134100  
-##                 158) exp_kib_class=3 105   2.9681590  0.215326600 *
-##                 159) exp_kib_class=1 222   8.2259380  0.334353900  
-##                   318) iskveg4_ordered=1,2 123   1.7889580  0.265850700 *
-##                   319) iskveg4_ordered=3,4 99   5.1426530  0.419463900 *
-##         5) kra_ordered=1,2 3364 120.4026000  0.165632500  
-##          10) kor_csop=1,2 1419  43.5492700  0.121275800  
-##            20) kshreg_3=1 1166  34.0127400  0.100277700  
-##              40) iskveg4_ordered=1,2,3 571  16.2792100  0.074860800  
-##                80) kor_csop=1 78   1.4259200  0.036592570 *
-##                81) kor_csop=2,3,4,5 493  14.7209900  0.080915410  
-##                 162) iskveg4_ordered=1,2 72   1.5012350  0.044152960 *
-##                 163) iskveg4_ordered=3,4 421  13.1058100  0.087202570  
-##                   326) kollszerz=0 296   9.2560040  0.074532560  
-##                     652) ttip=2,3 150   4.5233950  0.046393210  
-##                      1304) exp_kib_class=4 89   1.9331740  0.020046870 *
-##                      1305) exp_kib_class=1,3 61   2.4383090  0.084832970 *
-##                     653) ttip=1 146   4.4918080  0.103442800 *
-##                   327) kollszerz=1 125   3.6897670  0.117205200 *
-##              41) iskveg4_ordered=4 595  17.0106600  0.124669300  
-##                82) vallmeret=1,2,3 329   9.8027230  0.090449980  
-##                 164) szolgho_csop=1,2 261   7.9719700  0.078888750  
-##                   328) exp_kib_class=1 75   2.3975820  0.033277500 *
-##                   329) exp_kib_class=3,4 186   5.3554430  0.097280380  
-##                     658) szolgho_csop=2,3,4 93   3.0613100  0.070758850 *
-##                     659) szolgho_csop=1 93   2.1633020  0.123801900 *
-##                 165) szolgho_csop=3,4 68   1.6619680  0.134824700 *
-##                83) vallmeret=4 266   6.3462000  0.166993300  
-##                 166) szolgho_csop=1,2 201   4.2354690  0.149649600  
-##                   332) ttip=3 73   0.8759748  0.105449300 *
-##                   333) ttip=1,2 128   3.1355400  0.174857600 *
-##                 167) szolgho_csop=3,4 65   1.8633050  0.220625200 *
-##            21) kshreg_3=2,3 253   6.6530060  0.218049900  
-##              42) iskveg4_ordered=1,2,3 163   3.0029290  0.173898300  
-##                84) szolgho_csop=1,2 109   1.6646980  0.153719600 *
-##                85) szolgho_csop=3,4 54   1.2042600  0.214629500 *
-##              43) iskveg4_ordered=4 90   2.7568570  0.298013400 *
-##          11) kor_csop=3,4,5 1945  72.0245800  0.197993500  
-##            22) kshreg_3=1 1431  55.1743200  0.185130000  
-##              44) iskveg4_ordered=1,2,3 902  33.1769300  0.164853500  
-##                88) szolgho_csop=1,2,3 611  21.2472600  0.144527600  
-##                 176) kra_ordered=2,3,4 98   2.3764040  0.093584740 *
-##                 177) kra_ordered=1 513  18.5679500  0.154259400  
-##                   354) vallmeret=1,2,3 253  10.7585000  0.124046800  
-##                     708) kollszerz=0 180   7.7638660  0.104105700  
-##                      1416) vallmeret=2,3,4 129   3.8410160  0.074464960 *
-##                      1417) vallmeret=1 51   3.5228410  0.179079300 *
-##                     709) kollszerz=1 73   2.7465700  0.173216700 *
-##                   355) vallmeret=4 260   7.3537830  0.183658600  
-##                     710) ttip=2,3 140   2.2158460  0.132653300 *
-##                     711) ttip=1 120   4.3488020  0.243164900 *
-##                89) szolgho_csop=4 291  11.1472200  0.207530900  
-##                 178) kollszerz=1 166   5.0450680  0.175031100 *
-##                 179) kollszerz=0 125   5.6939730  0.250690600 *
-##              45) iskveg4_ordered=4 529  20.9942100  0.219703600  
-##                90) kollszerz=0 259  10.1257800  0.171999800  
-##                 180) exp_kib_class=1 92   4.4648750  0.122170300 *
-##                 181) exp_kib_class=3,4 167   5.3066240  0.199450800  
-##                   362) szolgho_csop=1,2 77   2.0226050  0.166386800 *
-##                   363) szolgho_csop=3,4 90   3.1278210  0.227738800 *
-##                91) kollszerz=1 270   9.7136620  0.265463900  
-##                 182) kor_csop=4,5 102   4.2535750  0.227505300 *
-##                 183) kor_csop=1,2,3 168   5.2238900  0.288510200  
-##                   366) kra_ordered=2,3,4 59   1.8115390  0.234304100 *
-##                   367) kra_ordered=1 109   3.1451550  0.317851100 *
-##            23) kshreg_3=2,3 514  15.9542500  0.233806000  
-##              46) iskveg4_ordered=3,4 354  11.5465600  0.211551500  
-##                92) szolgho_csop=1,2,3 220   6.7227330  0.180851400  
-##                 184) iskveg4_ordered=1,2,3 159   3.4437040  0.153530700  
-##                   368) vallmeret=3,4 109   2.3517920  0.129309900 *
-##                   369) vallmeret=1,2 50   0.8885665  0.206332300 *
-##                 185) iskveg4_ordered=4 61   2.8509990  0.252064400 *
-##                93) szolgho_csop=4 134   4.2760580  0.261954700 *
-##              47) iskveg4_ordered=1,2 160   3.8444680  0.283043800  
-##                94) exp_kib_class=1,3 65   1.0204920  0.233287600 *
-##                95) exp_kib_class=4 95   2.5529540  0.317087600 *
-##       3) exp_kib_class=2 6728 217.2823000  0.208707900  
-##         6) szolgho_csop=1,2 3229  90.9461300  0.173960900  
-##          12) vallmeret=4 1204  28.2260600  0.140713000  
-##            24) kor_csop=1,2 598  12.6008900  0.113394900  
-##              48) iskveg4_ordered=1,2 179   2.7403680  0.081136300 *
-##              49) iskveg4_ordered=3,4 419   9.5946750  0.127176000  
-##                98) kor_csop=1 102   1.5685150  0.095121280 *
-##                99) kor_csop=2,3,4,5 317   7.8876320  0.137490100  
-##                 198) ttip=3 52   1.4948070  0.071817880 *
-##                 199) ttip=1,2 265   6.1245500  0.150376700  
-##                   398) kshreg_3=1 140   3.2589590  0.126995900 *
-##                   399) kshreg_3=2,3 125   2.7033420  0.176563200 *
-##            25) kor_csop=3,4,5 606  14.7385200  0.167670500  
-##              50) iskveg4_ordered=1,2 354   6.8345680  0.127041000  
-##               100) kshreg_3=1,3 177   3.0123190  0.111292300  
-##                 200) szolgho_csop=1 66   0.7109241  0.062220600 *
-##                 201) szolgho_csop=2,3,4 111   2.0479660  0.140470000 *
-##               101) kshreg_3=2 177   3.7344490  0.142789800  
-##                 202) kra_ordered=2,3,4 61   0.6983617  0.094778890 *
-##                 203) kra_ordered=1 116   2.8215390  0.168036900 *
-##              51) iskveg4_ordered=3,4 252   6.4986820  0.224745300  
-##               102) iskveg4_ordered=1,2,3 192   4.8973220  0.210878400  
-##                 204) kollszerz=1 76   1.9187540  0.171933500 *
-##                 205) kollszerz=0 116   2.7877770  0.236394000 *
-##               103) iskveg4_ordered=4 60   1.4462970  0.269119400 *
-##          13) vallmeret=1,2,3 2025  60.5978000  0.193729100  
-##            26) kra_ordered=3,4 1280  38.5472300  0.167705900  
-##              52) iskveg4_ordered=1,2 734  11.9127100  0.140650100  
-##               104) kshreg_3=1 202   3.6286520  0.097886740  
-##                 208) kollszerz=0 151   2.7276660  0.080052330 *
-##                 209) kollszerz=1 51   0.7107570  0.150690600 *
-##               105) kshreg_3=2,3 532   7.7744010  0.156887300  
-##                 210) vallmeret=1,2 394   5.7219110  0.140684600  
-##                   420) kor_csop=1,2,3 203   3.0237790  0.119246100  
-##                     840) ttip=2 121   2.0887250  0.095964910 *
-##                     841) ttip=3 82   0.7726943  0.153600100 *
-##                   421) kor_csop=4,5 191   2.5056690  0.163470000  
-##                     842) szolgho_csop=1 69   1.1079990  0.142169900 *
-##                     843) szolgho_csop=2,3,4 122   1.3486600  0.175516800 *
-##                 211) vallmeret=3,4 138   1.6537390  0.203147000 *
-##              53) iskveg4_ordered=3,4 546  25.3749200  0.204077600  
-##               106) kshreg_3=1,3 355  15.2988600  0.179937200  
-##                 212) vallmeret=1,2 251  11.3726600  0.149667600  
-##                   424) szolgho_csop=2,3,4 137   6.2139970  0.122925100 *
-##                   425) szolgho_csop=1 114   4.9429370  0.181805700 *
-##                 213) vallmeret=3,4 104   3.1411780  0.252991600 *
-##               107) kshreg_3=2 191   9.4846690  0.248945800  
-##                 214) iskveg4_ordered=4 54   2.1255970  0.212378500 *
-##                 215) iskveg4_ordered=1,2,3 137   7.2584040  0.263359200 *
-##            27) kra_ordered=1,2 745  19.6944300  0.238440100  
-##              54) iskveg4_ordered=4 132   4.2403390  0.160659200 *
-##              55) iskveg4_ordered=1,2,3 613  14.4835500  0.255189000  
-##               110) kor_csop=1 69   0.8813810  0.183406000 *
-##               111) kor_csop=2,3,4,5 544  13.2015300  0.264293800  
-##                 222) kor_csop=1,2 165   3.4791690  0.241809300  
-##                   444) iskveg4_ordered=3,4 71   1.7882560  0.207851700 *
-##                   445) iskveg4_ordered=1,2 94   1.5472020  0.267458200 *
-##                 223) kor_csop=3,4,5 379   9.6026270  0.274082600  
-##                   446) kor_csop=5 63   2.8363350  0.224653200 *
-##                   447) kor_csop=1,2,3,4 316   6.5816780  0.283937200  
-##                     894) iskveg4_ordered=1 98   1.3339080  0.251744800 *
-##                     895) iskveg4_ordered=2,3,4 218   5.1005510  0.298409000  
-##                      1790) ttip=1,3 72   1.8117770  0.274705800 *
-##                      1791) ttip=2 146   3.2283720  0.310098300 *
-##         7) szolgho_csop=3,4 3499 118.8399000  0.240773600  
-##          14) kra_ordered=3,4 1656  53.5624400  0.207671400  
-##            28) vallmeret=1,2 759  23.8682400  0.167142100  
-##              56) kollszerz=0 562  17.4581100  0.147123600  
-##               112) iskveg4_ordered=3,4 264  11.2182600  0.110959900  
-##                 224) kshreg_3=1,2 153   7.5510560  0.082522250  
-##                   448) szolgho_csop=4 64   2.3235910  0.045307010 *
-##                   449) szolgho_csop=1,2,3 89   5.0750860  0.109283800 *
-##                 225) kshreg_3=3 111   3.3729240  0.150157700 *
-##               113) iskveg4_ordered=1,2 298   5.5887150  0.179161300  
-##                 226) szolgho_csop=1,2,3 168   3.2290890  0.154571300  
-##                   452) iskveg4_ordered=1 59   0.6054290  0.111175000 *
-##                   453) iskveg4_ordered=2,3,4 109   2.4524060  0.178061000 *
-##                 227) szolgho_csop=4 130   2.1267640  0.210939100 *
-##              57) kollszerz=1 197   5.5424230  0.224250600  
-##               114) kshreg_3=1,2 133   4.1987780  0.210515500 *
-##               115) kshreg_3=3 64   1.2664130  0.252793800 *
-##            29) vallmeret=3,4 897  27.3925000  0.241965500  
-##              58) szolgho_csop=1,2,3 423  12.5672300  0.200707400  
-##               116) vallmeret=4 202   4.9506920  0.158098300  
-##                 232) kor_csop=1,2 68   1.4757890  0.118969200 *
-##                 233) kor_csop=3,4,5 134   3.3179560  0.177954800 *
-##               117) vallmeret=1,2,3 221   6.9145870  0.239653300  
-##                 234) kshreg_3=1 65   2.2349540  0.128008600 *
-##                 235) kshreg_3=2,3 156   3.5318580  0.286171900  
-##                   470) kshreg_3=3 93   1.6994140  0.265386000 *
-##                   471) kshreg_3=2 63   1.7329480  0.316855800 *
-##              59) szolgho_csop=4 474  13.4626600  0.278784400  
-##               118) iskveg4_ordered=4 53   1.5731930  0.158023700 *
-##               119) iskveg4_ordered=1,2,3 421  11.0192500  0.293987100  
-##                 238) kshreg_3=1,3 226   6.8800840  0.269321800  
-##                   476) ttip=2 149   3.3249840  0.248475100 *
-##                   477) ttip=1,3 77   3.3650450  0.309661500 *
-##                 239) kshreg_3=2 195   3.8423250  0.322573600  
-##                   478) ttip=3 62   0.9308351  0.277847500 *
-##                   479) ttip=2 133   2.7296470  0.343423300 *
-##          15) kra_ordered=1,2 1843  61.8324400  0.270517100  
-##            30) kshreg_3=1 627  17.3325600  0.214644700  
-##              60) kor_csop=1,2 151   3.1491870  0.165928600 *
-##              61) kor_csop=3,4,5 476  13.7113300  0.230098800  
-##               122) vallmeret=1,2 105   3.7780970  0.196509700 *
-##               123) vallmeret=3,4 371   9.7812400  0.239605100  
-##                 246) ttip=1,2 306   7.4196530  0.227475400  
-##                   492) iskveg4_ordered=1,2 121   2.1894410  0.191213900 *
-##                   493) iskveg4_ordered=3,4 185   4.9670490  0.251192300  
-##                     986) kra_ordered=2,3,4 79   1.7730950  0.223420300 *
-##                     987) kra_ordered=1 106   3.0876110  0.271890300 *
-##                 247) ttip=3 65   2.1046150  0.296708200 *
-##            31) kshreg_3=2,3 1216  41.5333100  0.299326400  
-##              62) iskveg4_ordered=4 159   5.3285870  0.188727100  
-##               124) kor_csop=1,2 56   1.0000900  0.140494400 *
-##               125) kor_csop=3,4,5 103   4.1273880  0.214950600 *
-##              63) iskveg4_ordered=1,2,3 1057  33.9672400  0.315963400  
-##               126) vallmeret=3,4 839  24.9324900  0.295631000  
-##                 252) iskveg4_ordered=1,2 523  14.8622400  0.272654700  
-##                   504) vallmeret=4 309   7.8189720  0.243740700  
-##                    1008) szolgho_csop=1,2,3 159   4.3072840  0.221148800  
-##                      2016) kshreg_3=2 94   3.0309620  0.186437300 *
-##                      2017) kshreg_3=3 65   0.9992715  0.271347000 *
-##                    1009) szolgho_csop=4 150   3.3445140  0.267688100  
-##                      2018) iskveg4_ordered=1 73   1.3458830  0.238084600 *
-##                      2019) iskveg4_ordered=2,3,4 77   1.8740050  0.295753600 *
-##                   505) vallmeret=1,2,3 214   6.4119300  0.314404300  
-##                    1010) iskveg4_ordered=1 61   1.7868740  0.288790800 *
-##                    1011) iskveg4_ordered=2,3,4 153   4.5690810  0.324616200 *
-##                 253) iskveg4_ordered=3,4 316   9.3371900  0.333658400  
-##                   506) kor_csop=1,2 80   1.8626380  0.255859400 *
-##                   507) kor_csop=3,4,5 236   6.8261970  0.360030900  
-##                    1014) kollszerz=1 106   2.1537830  0.328904300 *
-##                    1015) kollszerz=0 130   4.4859750  0.385411100 *
-##               127) vallmeret=1,2 218   7.3530270  0.394214900  
-##                 254) kshreg_3=3 69   1.4485820  0.291235000 *
-##                 255) kshreg_3=2 149   4.8338520  0.441903500 *</code></pre>
+##    1) root 18638 690.9670000  0.132945500  
+##      2) kra_ordered=3,4 12129 435.5335000  0.111598300  
+##        4) exp_kib_class=1,3,4 8980 354.7457000  0.096760720  
+##          8) iskveg4_ordered=1,2,3 6889 236.7401000  0.082723850  
+##           16) vallmeret=1 2391  47.2542200  0.058061670  
+##             32) kshreg_3=1 848  25.2426600  0.037255290  
+##               64) iskveg4_ordered=3,4 621  20.7205800  0.028621730  
+##                128) kor_csop=3,4,5 370  14.0869500  0.007440548  
+##                  256) szolgho_csop=1 78   1.9272030 -0.024051740 *
+##                  257) szolgho_csop=2,3,4 292  12.0617200  0.015852870  
+##                    514) exp_kib_class=4 157   7.3383690 -0.005738606  
+##                     1028) szolgho_csop=3,4 99   4.2157740 -0.026387230 *
+##                     1029) szolgho_csop=1,2 58   3.0083360  0.029506470 *
+##                    515) exp_kib_class=1,3 135   4.5650440  0.040962960 *
+##                129) kor_csop=1,2 251   6.2229310  0.059844980  
+##                  258) kor_csop=2,3,4,5 198   5.2260140  0.051695220  
+##                    516) ttip=1 68   2.2800410  0.030901680 *
+##                    517) ttip=2,3 130   2.9011930  0.062571840 *
+##                  259) kor_csop=1 53   0.9346361  0.090291240 *
+##               65) iskveg4_ordered=1,2 227   4.3491610  0.060873980  
+##                130) szolgho_csop=1,2 150   2.3984690  0.028834250  
+##                  260) kor_csop=1,2,3 88   1.6105380  0.005572599 *
+##                  261) kor_csop=4,5 62   0.6727279  0.061850780 *
+##                131) szolgho_csop=3,4 77   1.4967460  0.123289000 *
+##             33) kshreg_3=2,3 1543  21.4427100  0.069496420  
+##               66) exp_kib_class=3 243   4.2120240  0.030902070  
+##                132) iskveg4_ordered=3,4 141   3.1284070 -0.006703663 *
+##                133) iskveg4_ordered=1,2 102   0.6085738  0.082886470 *
+##               67) exp_kib_class=1,4 1300  16.8010700  0.076710590  
+##                134) kollszerz=0 1170  14.8218700  0.072729850  
+##                  268) ara_ordered=2,3,4 1107  14.2112000  0.069736480  
+##                    536) szolgho_csop=1,2,3 858   9.7242210  0.063516690  
+##                     1072) kor_csop=1 76   0.4707208  0.034620630 *
+##                     1073) kor_csop=2,3,4,5 782   9.1838740  0.066325000  
+##                       2146) iskveg4_ordered=2,3,4 722   8.8357970  0.064098370  
+##                         4292) ttip=2 634   7.8750030  0.061314870 *
+##                         4293) ttip=3 88   0.9204920  0.084152260 *
+##                       2147) iskveg4_ordered=1 60   0.3014230  0.093118780 *
+##                    537) szolgho_csop=4 249   4.3394170  0.091168540  
+##                     1074) ttip=2 192   3.5085720  0.078881760  
+##                       2148) exp_kib_class=1 96   1.4987470  0.064040180 *
+##                       2149) exp_kib_class=4 96   1.9675330  0.093723340 *
+##                     1075) ttip=3 57   0.7042253  0.132555600 *
+##                  269) ara_ordered=1 63   0.4264563  0.125327500 *
+##                135) kollszerz=1 130   1.7938020  0.112537300 *
+##           17) vallmeret=2,3,4 4498 187.2586000  0.095833520  
+##             34) kor_csop=1,2 1240  46.2049400  0.063700500  
+##               68) exp_kib_class=4 887  38.4143300  0.045940100  
+##                136) vallmeret=3,4 668  33.2322900  0.030512450  
+##                  272) iskveg4_ordered=3,4 431  28.3901200  0.011198170  
+##                    544) vallmeret=4 311  25.6812000 -0.007757457  
+##                     1088) kshreg_3=2,3 104   7.2365180 -0.068783890 *
+##                     1089) kshreg_3=1 207  17.8627700  0.022903170  
+##                       2178) kollszerz=0 81   2.3471080 -0.041755690 *
+##                       2179) kollszerz=1 126  14.9593200  0.064469570 *
+##                    545) vallmeret=1,2,3 120   2.3075530  0.060324830 *
+##                  273) iskveg4_ordered=1,2 237   4.3890000  0.065636720  
+##                    546) vallmeret=1,2,3 66   0.4585035  0.012395000 *
+##                    547) vallmeret=4 171   3.6711980  0.086186160  
+##                     1094) ttip=1,2 71   0.7912388  0.057156570 *
+##                     1095) ttip=3 100   2.7776450  0.106797200 *
+##                137) vallmeret=1,2 219   4.5380840  0.092997950  
+##                  274) kshreg_3=1 121   2.5573370  0.069676520 *
+##                  275) kshreg_3=2,3 98   1.8336800  0.121792800 *
+##               69) exp_kib_class=1,3 353   6.8077910  0.108327900  
+##                138) iskveg4_ordered=1,2 136   2.1253370  0.068935340 *
+##                139) iskveg4_ordered=3,4 217   4.3391480  0.133016300  
+##                  278) exp_kib_class=3 52   1.3148360  0.077156830 *
+##                  279) exp_kib_class=1 165   2.8109220  0.150620600  
+##                    558) szolgho_csop=1,2 102   1.2505080  0.129054800 *
+##                    559) szolgho_csop=3,4 63   1.4361710  0.185536500 *
+##             35) kor_csop=3,4,5 3258 139.2860000  0.108063400  
+##               70) vallmeret=1,2,3 1798  37.9745200  0.086965040  
+##                140) ttip=1,3 764  19.7270500  0.052995690  
+##                  280) ara_ordered=1 55   2.0075660 -0.034022640 *
+##                  281) ara_ordered=2,3,4 709  17.2707100  0.059746060  
+##                    562) exp_kib_class=1,3 322   6.2587930  0.037442630  
+##                     1124) szolgho_csop=1,2 143   2.7537060 -0.001863335 *
+##                     1125) szolgho_csop=3,4 179   3.1076610  0.068843480  
+##                       2250) vallmeret=1,2 98   1.7305730  0.039966960 *
+##                       2251) vallmeret=3,4 81   1.1965030  0.103780500 *
+##                    563) exp_kib_class=4 387  10.7184600  0.078303430  
+##                     1126) iskveg4_ordered=3,4 275   8.9258770  0.064758990  
+##                       2252) ttip=1 125   4.0424970  0.041860980 *
+##                       2253) ttip=3 150   4.7632230  0.083840670  
+##                         4506) szolgho_csop=3,4 91   3.2287450  0.056028260 *
+##                         4507) szolgho_csop=1,2 59   1.3555170  0.126737800 *
+##                     1127) iskveg4_ordered=1,2 112   1.6182660  0.111559900 *
+##                141) ttip=2 1034  16.7144900  0.112064200  
+##                  282) exp_kib_class=3,4 717  11.6464100  0.097382030  
+##                    564) ara_ordered=4 546   9.2090550  0.084909440  
+##                     1128) iskveg4_ordered=2,3,4 408   7.6864890  0.071181560  
+##                       2256) kshreg_3=1 95   1.2663620  0.042054910 *
+##                       2257) kshreg_3=2,3 313   6.3150710  0.080021920  
+##                         4514) iskveg4_ordered=3,4 225   5.2179780  0.068639220  
+##                           9028) kor_csop=1,2,3 85   2.1709790  0.047105890 *
+##                           9029) kor_csop=4,5 140   2.9836560  0.081713030 *
+##                         4515) iskveg4_ordered=1,2 88   0.9934035  0.109125400 *
+##                     1129) iskveg4_ordered=1 138   1.2183510  0.125496200 *
+##                    565) ara_ordered=1,2,3 171   2.0812070  0.137206800  
+##                     1130) iskveg4_ordered=3,4 105   1.3393520  0.111951600 *
+##                     1131) iskveg4_ordered=1,2 66   0.5683368  0.177385600 *
+##                  283) exp_kib_class=1 317   4.5639240  0.145272900  
+##                    566) szolgho_csop=1,2,3 207   2.3684360  0.125961700  
+##                     1132) vallmeret=1,2 111   0.8238021  0.096623280 *
+##                     1133) vallmeret=3,4 96   1.3386200  0.159884300 *
+##                    567) szolgho_csop=4 110   1.9730260  0.181613000 *
+##               71) vallmeret=4 1460  99.5254600  0.134046200  
+##                142) ttip=1,2 939  37.7854600  0.108793800  
+##                  284) exp_kib_class=4 654  30.0143800  0.077420110  
+##                    568) szolgho_csop=2,3,4 542  24.2285700  0.062673560  
+##                     1136) kshreg_3=2,3 330  15.8241400  0.039659570  
+##                       2272) ara_ordered=3,4 64   1.3836250 -0.020339340 *
+##                       2273) ara_ordered=1,2 266  14.1546900  0.054095400  
+##                         4546) kshreg_3=2 121   6.6499690  0.020353370 *
+##                         4547) kshreg_3=3 145   7.2519980  0.082252540 *
+##                     1137) kshreg_3=1 212   7.9575800  0.098497220  
+##                       2274) ara_ordered=2,3,4 142   3.0293160  0.072912550 *
+##                       2275) ara_ordered=1 70   4.6467580  0.150397500 *
+##                    569) szolgho_csop=1 112   5.0975730  0.148782900 *
+##                  285) exp_kib_class=1,3 285   5.6501360  0.180788200  
+##                    570) kshreg_3=1 92   1.3090290  0.135428300 *
+##                    571) kshreg_3=2,3 193   4.0615820  0.202410500  
+##                     1142) exp_kib_class=3 72   1.5179410  0.148413900 *
+##                     1143) exp_kib_class=1 121   2.2088020  0.234540700 *
+##                143) ttip=3 521  60.0620300  0.179558600  
+##                  286) szolgho_csop=1 137  10.8503700  0.099123930 *
+##                  287) szolgho_csop=2,3,4 384  48.0090800  0.208255400  
+##                    574) ara_ordered=2,3,4 150   4.9908100  0.144514600  
+##                     1148) iskveg4_ordered=3,4 93   2.8676440  0.116002500 *
+##                     1149) iskveg4_ordered=1,2 57   1.9242090  0.191034400 *
+##                    575) ara_ordered=1 234  42.0181700  0.249114800  
+##                     1150) kor_csop=4,5 144  25.4958000  0.225110900 *
+##                     1151) kor_csop=1,2,3 90  16.3066500  0.287521100 *
+##          9) iskveg4_ordered=4 2091 112.1763000  0.143006500  
+##           18) vallmeret=1 809  43.0727200  0.104798900  
+##             36) szolgho_csop=3,4 364  21.9764500  0.071244330  
+##               72) kor_csop=4,5 128   6.4205460  0.027979360 *
+##               73) kor_csop=1,2,3 236  15.1863500  0.094710080  
+##                146) kshreg_3=1 134  11.9894800  0.059941480 *
+##                147) kshreg_3=2,3 102   2.8220830  0.140386500 *
+##             37) szolgho_csop=1,2 445  20.3512100  0.132245700  
+##               74) kshreg_3=1 273  15.4457500  0.106179300  
+##                148) ttip=3 154   8.3983380  0.089561040  
+##                  296) kor_csop=1,2 79   2.6732440  0.059942130 *
+##                  297) kor_csop=3,4,5 75   5.5827870  0.120759600 *
+##                149) ttip=1,2 119   6.9498430  0.127685200 *
+##               75) kshreg_3=2,3 172   4.4255580  0.173618600  
+##                150) kshreg_3=2 90   2.4403280  0.152280400 *
+##                151) kshreg_3=3 82   1.8992750  0.197038500 *
+##           19) vallmeret=2,3,4 1282  67.1773300  0.167117300  
+##             38) ttip=1 431  19.6666300  0.118719600  
+##               76) kra_ordered=4 368  17.5285900  0.103489700  
+##                152) ara_ordered=1,2 70   3.8698180  0.063746750 *
+##                153) ara_ordered=3,4 298  13.5222400  0.112825300  
+##                  306) szolgho_csop=1,2 181   7.0251810  0.090889130  
+##                    612) szolgho_csop=2,3,4 88   4.0607420  0.063019510 *
+##                    613) szolgho_csop=1 93   2.8314110  0.117260400 *
+##                  307) szolgho_csop=3,4 117   6.2752200  0.146760900 *
+##               77) kra_ordered=1,2,3 63   1.5540870  0.207681500 *
+##             39) ttip=2,3 851  45.9898500  0.191628900  
+##               78) kor_csop=4,5 227  11.4578300  0.137501800  
+##                156) vallmeret=1,2 82   3.3021330  0.054688710 *
+##                157) vallmeret=3,4 145   7.2753210  0.184334000 *
+##               79) kor_csop=1,2,3 624  33.6250300  0.211319400  
+##                158) exp_kib_class=3,4 542  29.4525200  0.199324100  
+##                  316) kshreg_3=1,3 413  24.3116400  0.185536700  
+##                    632) kollszerz=0 304  11.9523900  0.160924900  
+##                     1264) vallmeret=4 125   3.9037410  0.103004900 *
+##                     1265) vallmeret=1,2,3 179   7.3364770  0.201371800  
+##                       2530) szolgho_csop=1,2 116   4.7424450  0.175299200 *
+##                       2531) szolgho_csop=3,4 63   2.3699860  0.249378400 *
+##                    633) kollszerz=1 109  11.6615200  0.254178900 *
+##                  317) kshreg_3=2 129   4.8110220  0.243465100 *
+##                159) exp_kib_class=1 82   3.5790530  0.290605300 *
+##        5) exp_kib_class=2 3149  73.1730300  0.153910700  
+##         10) vallmeret=1 837  15.1730700  0.107058600  
+##           20) kshreg_3=1,3 592   9.5983680  0.093645820  
+##             40) kshreg_3=1 176   4.3871710  0.068403470  
+##               80) iskveg4_ordered=3,4 95   2.9340740  0.030533800 *
+##               81) iskveg4_ordered=1,2 81   1.1570680  0.112818500 *
+##             41) kshreg_3=3 416   5.0516090  0.104325300  
+##               82) iskveg4_ordered=1 67   0.4166045  0.068027840 *
+##               83) iskveg4_ordered=2,3,4 349   4.5297850  0.111293500  
+##                166) kor_csop=5 55   1.1329920  0.071828370 *
+##                167) kor_csop=1,2,3,4 294   3.2951060  0.118676500  
+##                  334) iskveg4_ordered=1,2 127   0.8288986  0.099049060 *
+##                  335) iskveg4_ordered=3,4 167   2.3800760  0.133602700 *
+##           21) kshreg_3=2 245   5.2108510  0.139468300  
+##             42) szolgho_csop=1,2 111   2.2252580  0.104842700 *
+##             43) szolgho_csop=3,4 134   2.7422730  0.168150700 *
+##         11) vallmeret=2,3,4 2312  55.4975000  0.170872300  
+##           22) szolgho_csop=1,2,3 1646  35.8945400  0.154239800  
+##             44) vallmeret=4 716  15.3843100  0.133340600  
+##               88) ttip=2,3 653  13.6882900  0.126246700  
+##                176) szolgho_csop=1,2 385   8.1425200  0.104554900  
+##                  352) iskveg4_ordered=1,2,3 325   6.4160910  0.093414520  
+##                    704) iskveg4_ordered=1 122   1.0338910  0.072716500 *
+##                    705) iskveg4_ordered=2,3,4 203   5.2985230  0.105853700  
+##                     1410) kollszerz=0 141   3.9479060  0.092237670 *
+##                     1411) kollszerz=1 62   1.2650260  0.136819300 *
+##                  353) iskveg4_ordered=4 60   1.4676130  0.164898400 *
+##                177) szolgho_csop=3,4 268   5.1043720  0.157408600  
+##                  354) iskveg4_ordered=1,2 162   2.3681780  0.135200500  
+##                    708) kshreg_3=3 86   0.9470677  0.102086100 *
+##                    709) kshreg_3=1,2 76   1.2200930  0.172672000 *
+##                  355) iskveg4_ordered=3,4 106   2.5341880  0.191349200 *
+##               89) ttip=1 63   1.3225540  0.206868900 *
+##             45) vallmeret=1,2,3 930  19.9567300  0.170329900  
+##               90) vallmeret=1,2 493  10.1802700  0.143090800  
+##                180) iskveg4_ordered=3,4 219   6.4484210  0.123154800  
+##                  360) iskveg4_ordered=1,2,3 150   3.8791060  0.101736000  
+##                    720) kshreg_3=1,2 81   2.1153280  0.083297430 *
+##                    721) kshreg_3=3 69   1.7039120  0.123381200 *
+##                  361) iskveg4_ordered=4 69   2.3509010  0.169717700 *
+##                181) iskveg4_ordered=1,2 274   3.5752460  0.159025000  
+##                  362) szolgho_csop=1,2 145   1.2702320  0.129001700 *
+##                  363) szolgho_csop=3,4 129   2.0273980  0.192772000 *
+##               91) vallmeret=3,4 437   8.9979960  0.201059600  
+##                182) kshreg_3=1,3 277   5.4337080  0.182380100  
+##                  364) iskveg4_ordered=1 69   0.5468769  0.129828100 *
+##                  365) iskveg4_ordered=2,3,4 208   4.6330580  0.199813200  
+##                    730) kor_csop=4,5 69   1.7167140  0.176014100 *
+##                    731) kor_csop=1,2,3 139   2.8578630  0.211627200 *
+##                183) kshreg_3=2 160   3.3003080  0.233398500 *
+##           23) szolgho_csop=4 666  18.0222300  0.211979000  
+##             46) kshreg_3=1,3 444  11.1392100  0.187934900  
+##               92) vallmeret=1,2 108   2.5942760  0.167733400 *
+##               93) vallmeret=3,4 336   8.4866960  0.194428200  
+##                186) iskveg4_ordered=3,4 170   4.7752790  0.175457100  
+##                  372) kshreg_3=1 64   2.4427520  0.146443600 *
+##                  373) kshreg_3=3 106   2.2461250  0.192974800 *
+##                187) iskveg4_ordered=1,2 166   3.5875760  0.213856300 *
+##             47) kshreg_3=2 222   6.1129590  0.260067300  
+##               94) vallmeret=1,2 52   1.7716340  0.166066600 *
+##               95) vallmeret=3,4 170   3.7412990  0.288820400  
+##                190) kor_csop=4,5 111   2.4687010  0.269393900 *
+##                191) kor_csop=1,2,3 59   1.1518970  0.325368600 *
+##      3) kra_ordered=1,2 6509 239.6068000  0.172724200  
+##        6) szolgho_csop=1,2 2984  91.2980700  0.140062300  
+##         12) kor_csop=1,2 1611  39.2212700  0.121850400  
+##           24) kollszerz=0 1248  30.9590500  0.115125000  
+##             48) iskveg4_ordered=1,2,3 711  13.9637000  0.100907000  
+##               96) vallmeret=4 314   5.4653080  0.076642530  
+##                192) exp_kib_class=1,2 200   2.6558000  0.059155700  
+##                  384) szolgho_csop=1 81   1.1469540  0.036730700 *
+##                  385) szolgho_csop=2,3,4 119   1.4403870  0.074419780 *
+##                193) exp_kib_class=4 114   2.6410560  0.107321200 *
+##               97) vallmeret=1,2,3 397   8.1672960  0.120098500  
+##                194) exp_kib_class=1 66   1.8088920  0.062817670 *
+##                195) exp_kib_class=2,3,4 331   6.0986720  0.131520000  
+##                  390) iskveg4_ordered=3,4 166   3.7643900  0.102017500  
+##                    780) kshreg_3=1 83   2.1164690  0.080043870 *
+##                    781) kshreg_3=2,3 83   1.5677690  0.123991000 *
+##                  391) iskveg4_ordered=1,2 165   2.0444330  0.161201400  
+##                    782) kshreg_3=2 56   0.6643491  0.130210800 *
+##                    783) kshreg_3=1,3 109   1.2986690  0.177123100 *
+##             49) iskveg4_ordered=4 537  16.6613200  0.133950100  
+##               98) kshreg_3=1,3 486  14.5958200  0.124177000  
+##                196) vallmeret=2,3,4 387  10.9281900  0.113426200  
+##                  392) vallmeret=1,2,3 239   7.2591270  0.089736120  
+##                    784) ttip=3 145   3.2148380  0.060594610 *
+##                    785) ttip=1,2 94   3.7312040  0.134688400 *
+##                  393) vallmeret=4 148   3.3183290  0.151682600 *
+##                197) vallmeret=1 99   3.4480480  0.166202900 *
+##               99) kshreg_3=2 51   1.5767280  0.227081700 *
+##           25) kollszerz=1 363   8.0117030  0.144972400  
+##             50) ara_ordered=1,2,3 56   1.3616500  0.107622200 *
+##             51) ara_ordered=4 307   6.5576810  0.151785400  
+##              102) szolgho_csop=1 148   3.6387840  0.132162000 *
+##              103) szolgho_csop=2,3,4 159   2.8088570  0.170051200  
+##                206) exp_kib_class=1,4 85   1.4777630  0.152421100 *
+##                207) exp_kib_class=2,3 74   1.2743270  0.190302000 *
+##         13) kor_csop=3,4,5 1373  50.9155300  0.161431100  
+##           26) iskveg4_ordered=1,2,3 1068  30.9949100  0.144440600  
+##             52) ttip=1 171   4.4741010  0.084601370  
+##              104) iskveg4_ordered=3,4 91   2.9451810  0.045293200 *
+##              105) iskveg4_ordered=1,2 80   1.2283720  0.129314400 *
+##             53) ttip=2,3 897  25.7917700  0.155848100  
+##              106) vallmeret=1 130   3.6965020  0.091765980 *
+##              107) vallmeret=2,3,4 767  21.4709400  0.166709500  
+##                214) iskveg4_ordered=1,2 508   8.9831750  0.138438200  
+##                  428) vallmeret=4 211   3.9178260  0.101009300  
+##                    856) exp_kib_class=2 129   2.4580120  0.065121970 *
+##                    857) exp_kib_class=1,4 82   1.0323110  0.157466100 *
+##                  429) vallmeret=1,2,3 297   4.5597510  0.165029100  
+##                    858) kshreg_3=1,2 197   3.2988200  0.148643300  
+##                     1716) vallmeret=3,4 134   1.8199950  0.130522000 *
+##                     1717) vallmeret=1,2 63   1.3412270  0.187187100 *
+##                    859) kshreg_3=3 100   1.1038370  0.197309200 *
+##                215) iskveg4_ordered=3,4 259  11.2853600  0.222160600  
+##                  430) ttip=2 179   5.5953890  0.188437400  
+##                    860) kor_csop=1,2,3 102   3.6101720  0.166219000 *
+##                    861) kor_csop=4,5 77   1.8681620  0.217869600 *
+##                  431) ttip=3 80   5.0309200  0.297616200 *
+##           27) iskveg4_ordered=4 305  18.5327400  0.220925500  
+##             54) kshreg_3=1 224  14.5162300  0.194830700  
+##              108) vallmeret=1,2,3 145   9.0834310  0.162180800 *
+##              109) vallmeret=4 79   4.9945220  0.254757600 *
+##             55) kshreg_3=2,3 81   3.4421630  0.293089100 *
+##        7) szolgho_csop=3,4 3525 142.4306000  0.200373300  
+##         14) exp_kib_class=1,4 1801  86.3639000  0.168604300  
+##           28) vallmeret=1,2,3 704  34.0503900  0.128774600  
+##             56) vallmeret=2,3,4 469  20.6297900  0.102379700  
+##              112) kshreg_3=1 401  17.2207300  0.079440260  
+##                224) kor_csop=1,2,3 280  10.6209400  0.061937300  
+##                  448) iskveg4_ordered=1,2,3 123   5.1933890  0.019694290 *
+##                  449) iskveg4_ordered=4 157   5.0361050  0.095032150  
+##                    898) ttip=3 92   2.6644000  0.054852930 *
+##                    899) ttip=1,2 65   2.0129670  0.151901200 *
+##                225) kor_csop=4,5 121   6.3155100  0.119943000 *
+##              113) kshreg_3=2,3 68   1.9536840  0.237655100 *
+##             57) vallmeret=1 235  12.4417500  0.181452200  
+##              114) iskveg4_ordered=1,2,3 99   5.4108720  0.126950000 *
+##              115) iskveg4_ordered=4 136   6.5227260  0.221126600 *
+##           29) vallmeret=4 1097  50.4799600  0.194165000  
+##             58) kor_csop=1,2 283   9.6171330  0.136310100  
+##              116) iskveg4_ordered=1,2,3 174   6.4008970  0.098100550  
+##                232) ttip=1,3 72   2.9684800  0.048662380 *
+##                233) ttip=2 102   3.1322190  0.132998100 *
+##              117) iskveg4_ordered=4 109   2.5566800  0.197305100 *
+##             59) kor_csop=3,4,5 814  39.5862400  0.214279200  
+##              118) iskveg4_ordered=1,2 266   5.3521470  0.151219100  
+##                236) szolgho_csop=1,2,3 159   2.5165250  0.126390400  
+##                  472) kollszerz=0 70   1.0683920  0.101629100 *
+##                  473) kollszerz=1 89   1.3714590  0.145865600 *
+##                237) szolgho_csop=4 107   2.5919510  0.188114100 *
+##              119) iskveg4_ordered=3,4 548  32.6628800  0.244888600  
+##                238) kra_ordered=2,3,4 116   3.0998250  0.154219500 *
+##                239) kra_ordered=1 432  28.3533700  0.269235000  
+##                  478) szolgho_csop=4 205  13.5875000  0.224572100  
+##                    956) ttip=1,2 138   8.5482620  0.198423200 *
+##                    957) ttip=3 67   4.7505230  0.278431100 *
+##                  479) szolgho_csop=1,2,3 227  13.9876500  0.309569300  
+##                    958) kor_csop=1,2,3 137   6.3463480  0.257971100 *
+##                    959) kor_csop=4,5 90   6.7213330  0.388113100 *
+##         15) exp_kib_class=2,3 1724  52.3501200  0.233561200  
+##           30) vallmeret=4 836  21.4847400  0.202796500  
+##             60) kollszerz=0 348   6.2537350  0.160026200  
+##              120) szolgho_csop=1,2,3 190   3.4003170  0.131750700  
+##                240) kor_csop=1,2 57   0.6698941  0.091454810 *
+##                241) kor_csop=3,4,5 133   2.5982020  0.149020400 *
+##              121) szolgho_csop=4 158   2.5188420  0.194028400  
+##                242) iskveg4_ordered=1,2 90   1.0974420  0.161101400 *
+##                243) iskveg4_ordered=3,4 68   1.1946770  0.237608200 *
+##             61) kollszerz=1 488  14.1404400  0.233296700  
+##              122) ara_ordered=1,2,3 107   1.9685610  0.161249100 *
+##              123) ara_ordered=4 381  11.4604700  0.253530500  
+##                246) szolgho_csop=1,2,3 165   4.2742280  0.201205300  
+##                  492) kshreg_3=2 59   1.0919030  0.175916100 *
+##                  493) kshreg_3=1,3 106   3.1235900  0.215281400 *
+##                247) szolgho_csop=4 216   6.3893920  0.293501200  
+##                  494) kshreg_3=1,2 152   5.1634610  0.281130200  
+##                    988) iskveg4_ordered=1,2 65   0.7519136  0.259278500 *
+##                    989) iskveg4_ordered=3,4 87   4.3573210  0.297456100 *
+##                  495) kshreg_3=3 64   1.1474210  0.322882200 *
+##           31) vallmeret=1,2,3 888  29.3292200  0.262524400  
+##             62) iskveg4_ordered=3,4 429  18.3638400  0.220650200  
+##              124) kshreg_3=1 126   4.4098710  0.165387800 *
+##              125) kshreg_3=2,3 303  13.4091600  0.243630600  
+##                250) kollszerz=0 226   9.0621730  0.228011400  
+##                  500) szolgho_csop=1,2,3 110   2.9728730  0.192828900 *
+##                  501) szolgho_csop=4 116   5.8240260  0.261374100 *
+##                251) kollszerz=1 77   4.1300270  0.289474100 *
+##             63) iskveg4_ordered=1,2 459   9.5100910  0.301661700  
+##              126) ttip=1,3 124   3.3120180  0.249434400 *
+##              127) ttip=2 335   5.7346420  0.320993600  
+##                254) szolgho_csop=1,2,3 154   2.3182350  0.279932000  
+##                  508) kshreg_3=1,2 88   1.4030840  0.254886800 *
+##                  509) kshreg_3=3 66   0.7863522  0.313325700 *
+##                255) szolgho_csop=4 181   2.9358360  0.355929900  
+##                  510) kshreg_3=2 70   1.4710700  0.336191600 *
+##                  511) kshreg_3=1,3 111   1.4202950  0.368377600 *</code></pre>
 <pre class="r"><code>cp_value &lt;- 0.001 
 minbuck_value &lt;- 100
 
@@ -819,508 +785,430 @@ CART_train_B_RF_female_ordered &lt;- rpart(pred_diff_B_RF_ordered~iskveg4_ordere
                                                                     # , maxdepth = depth_value
                                              ), model=TRUE)
 CART_train_B_RF_female_ordered</code></pre>
-<pre><code>## n= 20119 
+<pre><code>## n= 18638 
 ## 
 ## node), split, n, deviance, yval
 ##       * denotes terminal node
 ## 
-##   1) root 20119 727.783000 0.15035240  
-##     2) exp_kib_class=1,3,4 13391 476.078100 0.12103310  
-##       4) kra_ordered=3,4 10027 346.739200 0.10607020  
-##         8) vallmeret=1 3409 124.117300 0.07149960  
-##          16) iskveg4_ordered=3,4 2568 108.589900 0.05524751  
-##            32) iskveg4_ordered=1,2,3 1840  63.931110 0.02769153 *
-##            33) iskveg4_ordered=4 728  39.730270 0.12489450  
-##              66) kollszerz=0 619  30.625630 0.09790849  
-##               132) ttip=1,3 378  18.660560 0.05915816 *
-##               133) ttip=2 241  10.507210 0.15868700 *
-##              67) kollszerz=1 109   6.093908 0.27814520 *
-##          17) iskveg4_ordered=1,2 841  12.778020 0.12112550 *
-##         9) vallmeret=2,3,4 6618 216.449100 0.12387790  
-##          18) exp_kib_class=4 4222 138.499300 0.10498770  
-##            36) iskveg4_ordered=1,2,3 3355  95.414280 0.09481559  
-##              72) iskveg4_ordered=3,4 2391  72.549230 0.07913235  
-##               144) kshreg_3=1,3 1857  59.845210 0.06771197  
-##                 288) vallmeret=1,2,3 649  25.121440 0.03762746 *
-##                 289) vallmeret=4 1208  33.820800 0.08387492  
-##                   578) ara_ordered=1,2,3 906  23.000520 0.06654579 *
-##                   579) ara_ordered=4 302   9.731996 0.13586230 *
-##               145) kshreg_3=2 534  11.619560 0.11884700 *
-##              73) iskveg4_ordered=1,2 964  20.818300 0.13371460  
-##               146) szolgho_csop=1,2 636  10.561170 0.10007320 *
-##               147) szolgho_csop=3,4 328   8.141656 0.19894600  
-##                 294) ara_ordered=1,2,3 144   2.786053 0.13226870 *
-##                 295) ara_ordered=4 184   4.214366 0.25112830 *
-##            37) iskveg4_ordered=4 867  41.394580 0.14435020  
-##              74) szolgho_csop=3,4 376  14.948920 0.09818094 *
-##              75) szolgho_csop=1,2 491  25.030420 0.17970590  
-##               150) kor_csop=1,2 316  11.564550 0.15105260 *
-##               151) kor_csop=3,4,5 175  12.737960 0.23144550 *
-##          19) exp_kib_class=1,3 2396  73.788410 0.15716430  
-##            38) kshreg_3=1 1100  30.732210 0.11910420 *
-##            39) kshreg_3=2,3 1296  40.110310 0.18946850  
-##              78) vallmeret=1,2,3 969  22.930320 0.15347300  
-##               156) vallmeret=1,2 575  12.930970 0.12962580 *
-##               157) vallmeret=3,4 394   9.195141 0.18827540 *
-##              79) vallmeret=4 327  12.204020 0.29613410  
-##               158) exp_kib_class=3 105   2.968159 0.21532660 *
-##               159) exp_kib_class=1 222   8.225938 0.33435390 *
-##       5) kra_ordered=1,2 3364 120.402600 0.16563250  
-##        10) kor_csop=1,2 1419  43.549270 0.12127580  
-##          20) kshreg_3=1 1166  34.012740 0.10027770  
-##            40) iskveg4_ordered=1,2,3 571  16.279210 0.07486080 *
-##            41) iskveg4_ordered=4 595  17.010660 0.12466930  
-##              82) vallmeret=1,2,3 329   9.802723 0.09044998 *
-##              83) vallmeret=4 266   6.346200 0.16699330 *
-##          21) kshreg_3=2,3 253   6.653006 0.21804990 *
-##        11) kor_csop=3,4,5 1945  72.024580 0.19799350  
-##          22) kshreg_3=1 1431  55.174320 0.18513000  
-##            44) iskveg4_ordered=1,2,3 902  33.176930 0.16485350  
-##              88) szolgho_csop=1,2,3 611  21.247260 0.14452760 *
-##              89) szolgho_csop=4 291  11.147220 0.20753090 *
-##            45) iskveg4_ordered=4 529  20.994210 0.21970360  
-##              90) kollszerz=0 259  10.125780 0.17199980 *
-##              91) kollszerz=1 270   9.713662 0.26546390 *
-##          23) kshreg_3=2,3 514  15.954250 0.23380600 *
-##     3) exp_kib_class=2 6728 217.282300 0.20870790  
-##       6) szolgho_csop=1,2 3229  90.946130 0.17396090  
-##        12) vallmeret=4 1204  28.226060 0.14071300  
-##          24) kor_csop=1,2 598  12.600890 0.11339490 *
-##          25) kor_csop=3,4,5 606  14.738520 0.16767050  
-##            50) iskveg4_ordered=1,2 354   6.834568 0.12704100 *
-##            51) iskveg4_ordered=3,4 252   6.498682 0.22474530 *
-##        13) vallmeret=1,2,3 2025  60.597800 0.19372910  
-##          26) kra_ordered=3,4 1280  38.547230 0.16770590  
-##            52) iskveg4_ordered=1,2 734  11.912710 0.14065010 *
-##            53) iskveg4_ordered=3,4 546  25.374920 0.20407760 *
-##          27) kra_ordered=1,2 745  19.694430 0.23844010  
-##            54) iskveg4_ordered=4 132   4.240339 0.16065920 *
-##            55) iskveg4_ordered=1,2,3 613  14.483550 0.25518900 *
-##       7) szolgho_csop=3,4 3499 118.839900 0.24077360  
-##        14) kra_ordered=3,4 1656  53.562440 0.20767140  
-##          28) vallmeret=1,2 759  23.868240 0.16714210  
-##            56) kollszerz=0 562  17.458110 0.14712360 *
-##            57) kollszerz=1 197   5.542423 0.22425060 *
-##          29) vallmeret=3,4 897  27.392500 0.24196550  
-##            58) szolgho_csop=1,2,3 423  12.567230 0.20070740 *
-##            59) szolgho_csop=4 474  13.462660 0.27878440 *
-##        15) kra_ordered=1,2 1843  61.832440 0.27051710  
-##          30) kshreg_3=1 627  17.332560 0.21464470 *
-##          31) kshreg_3=2,3 1216  41.533310 0.29932640  
-##            62) iskveg4_ordered=4 159   5.328587 0.18872710 *
-##            63) iskveg4_ordered=1,2,3 1057  33.967240 0.31596340  
-##             126) vallmeret=3,4 839  24.932490 0.29563100  
-##               252) iskveg4_ordered=1,2 523  14.862240 0.27265470 *
-##               253) iskveg4_ordered=3,4 316   9.337190 0.33365840 *
-##             127) vallmeret=1,2 218   7.353027 0.39421490 *</code></pre>
+##   1) root 18638 690.967000 0.13294550  
+##     2) kra_ordered=3,4 12129 435.533500 0.11159830  
+##       4) exp_kib_class=1,3,4 8980 354.745700 0.09676072  
+##         8) iskveg4_ordered=1,2,3 6889 236.740100 0.08272385  
+##          16) vallmeret=1 2391  47.254220 0.05806167 *
+##          17) vallmeret=2,3,4 4498 187.258600 0.09583352  
+##            34) kor_csop=1,2 1240  46.204940 0.06370050  
+##              68) exp_kib_class=4 887  38.414330 0.04594010 *
+##              69) exp_kib_class=1,3 353   6.807791 0.10832790 *
+##            35) kor_csop=3,4,5 3258 139.286000 0.10806340  
+##              70) vallmeret=1,2,3 1798  37.974520 0.08696504  
+##               140) ttip=1,3 764  19.727050 0.05299569 *
+##               141) ttip=2 1034  16.714490 0.11206420 *
+##              71) vallmeret=4 1460  99.525460 0.13404620  
+##               142) ttip=1,2 939  37.785460 0.10879380  
+##                 284) exp_kib_class=4 654  30.014380 0.07742011 *
+##                 285) exp_kib_class=1,3 285   5.650136 0.18078820 *
+##               143) ttip=3 521  60.062030 0.17955860  
+##                 286) szolgho_csop=1 137  10.850370 0.09912393 *
+##                 287) szolgho_csop=2,3,4 384  48.009080 0.20825540  
+##                   574) ara_ordered=2,3,4 150   4.990810 0.14451460 *
+##                   575) ara_ordered=1 234  42.018170 0.24911480 *
+##         9) iskveg4_ordered=4 2091 112.176300 0.14300650  
+##          18) vallmeret=1 809  43.072720 0.10479890  
+##            36) szolgho_csop=3,4 364  21.976450 0.07124433 *
+##            37) szolgho_csop=1,2 445  20.351210 0.13224570 *
+##          19) vallmeret=2,3,4 1282  67.177330 0.16711730  
+##            38) ttip=1 431  19.666630 0.11871960 *
+##            39) ttip=2,3 851  45.989850 0.19162890  
+##              78) kor_csop=4,5 227  11.457830 0.13750180 *
+##              79) kor_csop=1,2,3 624  33.625030 0.21131940 *
+##       5) exp_kib_class=2 3149  73.173030 0.15391070  
+##        10) vallmeret=1 837  15.173070 0.10705860 *
+##        11) vallmeret=2,3,4 2312  55.497500 0.17087230  
+##          22) szolgho_csop=1,2,3 1646  35.894540 0.15423980 *
+##          23) szolgho_csop=4 666  18.022230 0.21197900  
+##            46) kshreg_3=1,3 444  11.139210 0.18793490 *
+##            47) kshreg_3=2 222   6.112959 0.26006730 *
+##     3) kra_ordered=1,2 6509 239.606800 0.17272420  
+##       6) szolgho_csop=1,2 2984  91.298070 0.14006230  
+##        12) kor_csop=1,2 1611  39.221270 0.12185040 *
+##        13) kor_csop=3,4,5 1373  50.915530 0.16143110  
+##          26) iskveg4_ordered=1,2,3 1068  30.994910 0.14444060  
+##            52) ttip=1 171   4.474101 0.08460137 *
+##            53) ttip=2,3 897  25.791770 0.15584810  
+##             106) vallmeret=1 130   3.696502 0.09176598 *
+##             107) vallmeret=2,3,4 767  21.470940 0.16670950  
+##               214) iskveg4_ordered=1,2 508   8.983175 0.13843820 *
+##               215) iskveg4_ordered=3,4 259  11.285360 0.22216060 *
+##          27) iskveg4_ordered=4 305  18.532740 0.22092550 *
+##       7) szolgho_csop=3,4 3525 142.430600 0.20037330  
+##        14) exp_kib_class=1,4 1801  86.363900 0.16860430  
+##          28) vallmeret=1,2,3 704  34.050390 0.12877460  
+##            56) vallmeret=2,3,4 469  20.629790 0.10237970 *
+##            57) vallmeret=1 235  12.441750 0.18145220 *
+##          29) vallmeret=4 1097  50.479960 0.19416500  
+##            58) kor_csop=1,2 283   9.617133 0.13631010 *
+##            59) kor_csop=3,4,5 814  39.586240 0.21427920  
+##             118) iskveg4_ordered=1,2 266   5.352147 0.15121910 *
+##             119) iskveg4_ordered=3,4 548  32.662880 0.24488860  
+##               238) kra_ordered=2,3,4 116   3.099825 0.15421950 *
+##               239) kra_ordered=1 432  28.353370 0.26923500  
+##                 478) szolgho_csop=4 205  13.587500 0.22457210 *
+##                 479) szolgho_csop=1,2,3 227  13.987650 0.30956930 *
+##        15) exp_kib_class=2,3 1724  52.350120 0.23356120  
+##          30) vallmeret=4 836  21.484740 0.20279650  
+##            60) kollszerz=0 348   6.253735 0.16002620 *
+##            61) kollszerz=1 488  14.140440 0.23329670  
+##             122) ara_ordered=1,2,3 107   1.968561 0.16124910 *
+##             123) ara_ordered=4 381  11.460470 0.25353050  
+##               246) szolgho_csop=1,2,3 165   4.274228 0.20120530 *
+##               247) szolgho_csop=4 216   6.389392 0.29350120 *
+##          31) vallmeret=1,2,3 888  29.329220 0.26252440  
+##            62) iskveg4_ordered=3,4 429  18.363840 0.22065020 *
+##            63) iskveg4_ordered=1,2 459   9.510091 0.30166170 *</code></pre>
 <pre class="r"><code>cart_path &lt;- path.rpart(CART_train_B_RF_female_ordered, nodes=names(table(leaf.numbers(CART_train_B_RF_female_ordered))))</code></pre>
 <pre><code>## 
-##  node number: 17 
+##  node number: 10 
 ##    root
-##    exp_kib_class=1,3,4
 ##    kra_ordered=3,4
-##    vallmeret=1
-##    iskveg4_ordered=1,2
-## 
-##  node number: 21 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=1,2
-##    kshreg_3=2,3
-## 
-##  node number: 23 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=3,4,5
-##    kshreg_3=2,3
-## 
-##  node number: 24 
-##    root
 ##    exp_kib_class=2
+##    vallmeret=1
+## 
+##  node number: 12 
+##    root
+##    kra_ordered=1,2
 ##    szolgho_csop=1,2
-##    vallmeret=4
 ##    kor_csop=1,2
 ## 
-##  node number: 30 
+##  node number: 16 
 ##    root
-##    exp_kib_class=2
-##    szolgho_csop=3,4
-##    kra_ordered=1,2
-##    kshreg_3=1
-## 
-##  node number: 32 
-##    root
-##    exp_kib_class=1,3,4
 ##    kra_ordered=3,4
-##    vallmeret=1
-##    iskveg4_ordered=3,4
+##    exp_kib_class=1,3,4
 ##    iskveg4_ordered=1,2,3
+##    vallmeret=1
+## 
+##  node number: 22 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=2
+##    vallmeret=2,3,4
+##    szolgho_csop=1,2,3
+## 
+##  node number: 27 
+##    root
+##    kra_ordered=1,2
+##    szolgho_csop=1,2
+##    kor_csop=3,4,5
+##    iskveg4_ordered=4
+## 
+##  node number: 36 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=4
+##    vallmeret=1
+##    szolgho_csop=3,4
+## 
+##  node number: 37 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=4
+##    vallmeret=1
+##    szolgho_csop=1,2
 ## 
 ##  node number: 38 
 ##    root
-##    exp_kib_class=1,3,4
 ##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=1,3
-##    kshreg_3=1
-## 
-##  node number: 40 
-##    root
 ##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=1,2
-##    kshreg_3=1
-##    iskveg4_ordered=1,2,3
+##    iskveg4_ordered=4
+##    vallmeret=2,3,4
+##    ttip=1
 ## 
-##  node number: 50 
+##  node number: 46 
 ##    root
+##    kra_ordered=3,4
 ##    exp_kib_class=2
-##    szolgho_csop=1,2
-##    vallmeret=4
-##    kor_csop=3,4,5
-##    iskveg4_ordered=1,2
+##    vallmeret=2,3,4
+##    szolgho_csop=4
+##    kshreg_3=1,3
 ## 
-##  node number: 51 
+##  node number: 47 
 ##    root
+##    kra_ordered=3,4
 ##    exp_kib_class=2
-##    szolgho_csop=1,2
-##    vallmeret=4
-##    kor_csop=3,4,5
-##    iskveg4_ordered=3,4
+##    vallmeret=2,3,4
+##    szolgho_csop=4
+##    kshreg_3=2
 ## 
 ##  node number: 52 
 ##    root
-##    exp_kib_class=2
-##    szolgho_csop=1,2
-##    vallmeret=1,2,3
-##    kra_ordered=3,4
-##    iskveg4_ordered=1,2
-## 
-##  node number: 53 
-##    root
-##    exp_kib_class=2
-##    szolgho_csop=1,2
-##    vallmeret=1,2,3
-##    kra_ordered=3,4
-##    iskveg4_ordered=3,4
-## 
-##  node number: 54 
-##    root
-##    exp_kib_class=2
-##    szolgho_csop=1,2
-##    vallmeret=1,2,3
 ##    kra_ordered=1,2
-##    iskveg4_ordered=4
-## 
-##  node number: 55 
-##    root
-##    exp_kib_class=2
 ##    szolgho_csop=1,2
-##    vallmeret=1,2,3
-##    kra_ordered=1,2
+##    kor_csop=3,4,5
 ##    iskveg4_ordered=1,2,3
+##    ttip=1
 ## 
 ##  node number: 56 
 ##    root
-##    exp_kib_class=2
+##    kra_ordered=1,2
 ##    szolgho_csop=3,4
-##    kra_ordered=3,4
-##    vallmeret=1,2
-##    kollszerz=0
+##    exp_kib_class=1,4
+##    vallmeret=1,2,3
+##    vallmeret=2,3,4
 ## 
 ##  node number: 57 
 ##    root
-##    exp_kib_class=2
+##    kra_ordered=1,2
 ##    szolgho_csop=3,4
-##    kra_ordered=3,4
-##    vallmeret=1,2
-##    kollszerz=1
+##    exp_kib_class=1,4
+##    vallmeret=1,2,3
+##    vallmeret=1
 ## 
 ##  node number: 58 
 ##    root
-##    exp_kib_class=2
+##    kra_ordered=1,2
 ##    szolgho_csop=3,4
-##    kra_ordered=3,4
-##    vallmeret=3,4
-##    szolgho_csop=1,2,3
+##    exp_kib_class=1,4
+##    vallmeret=4
+##    kor_csop=1,2
 ## 
-##  node number: 59 
+##  node number: 60 
 ##    root
-##    exp_kib_class=2
+##    kra_ordered=1,2
 ##    szolgho_csop=3,4
-##    kra_ordered=3,4
-##    vallmeret=3,4
-##    szolgho_csop=4
+##    exp_kib_class=2,3
+##    vallmeret=4
+##    kollszerz=0
 ## 
 ##  node number: 62 
 ##    root
-##    exp_kib_class=2
-##    szolgho_csop=3,4
 ##    kra_ordered=1,2
-##    kshreg_3=2,3
-##    iskveg4_ordered=4
-## 
-##  node number: 67 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=1
-##    iskveg4_ordered=3,4
-##    iskveg4_ordered=4
-##    kollszerz=1
-## 
-##  node number: 74 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=4
 ##    szolgho_csop=3,4
-## 
-##  node number: 82 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=1,2
-##    kshreg_3=1
-##    iskveg4_ordered=4
+##    exp_kib_class=2,3
 ##    vallmeret=1,2,3
-## 
-##  node number: 83 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=1,2
-##    kshreg_3=1
-##    iskveg4_ordered=4
-##    vallmeret=4
-## 
-##  node number: 88 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=3,4,5
-##    kshreg_3=1
-##    iskveg4_ordered=1,2,3
-##    szolgho_csop=1,2,3
-## 
-##  node number: 89 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=3,4,5
-##    kshreg_3=1
-##    iskveg4_ordered=1,2,3
-##    szolgho_csop=4
-## 
-##  node number: 90 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=3,4,5
-##    kshreg_3=1
-##    iskveg4_ordered=4
-##    kollszerz=0
-## 
-##  node number: 91 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=1,2
-##    kor_csop=3,4,5
-##    kshreg_3=1
-##    iskveg4_ordered=4
-##    kollszerz=1
-## 
-##  node number: 127 
-##    root
-##    exp_kib_class=2
-##    szolgho_csop=3,4
-##    kra_ordered=1,2
-##    kshreg_3=2,3
-##    iskveg4_ordered=1,2,3
-##    vallmeret=1,2
-## 
-##  node number: 132 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=1
 ##    iskveg4_ordered=3,4
+## 
+##  node number: 63 
+##    root
+##    kra_ordered=1,2
+##    szolgho_csop=3,4
+##    exp_kib_class=2,3
+##    vallmeret=1,2,3
+##    iskveg4_ordered=1,2
+## 
+##  node number: 68 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=1,2,3
+##    vallmeret=2,3,4
+##    kor_csop=1,2
+##    exp_kib_class=4
+## 
+##  node number: 69 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=1,2,3
+##    vallmeret=2,3,4
+##    kor_csop=1,2
+##    exp_kib_class=1,3
+## 
+##  node number: 78 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
 ##    iskveg4_ordered=4
-##    kollszerz=0
+##    vallmeret=2,3,4
+##    ttip=2,3
+##    kor_csop=4,5
+## 
+##  node number: 79 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=4
+##    vallmeret=2,3,4
+##    ttip=2,3
+##    kor_csop=1,2,3
+## 
+##  node number: 106 
+##    root
+##    kra_ordered=1,2
+##    szolgho_csop=1,2
+##    kor_csop=3,4,5
+##    iskveg4_ordered=1,2,3
+##    ttip=2,3
+##    vallmeret=1
+## 
+##  node number: 118 
+##    root
+##    kra_ordered=1,2
+##    szolgho_csop=3,4
+##    exp_kib_class=1,4
+##    vallmeret=4
+##    kor_csop=3,4,5
+##    iskveg4_ordered=1,2
+## 
+##  node number: 122 
+##    root
+##    kra_ordered=1,2
+##    szolgho_csop=3,4
+##    exp_kib_class=2,3
+##    vallmeret=4
+##    kollszerz=1
+##    ara_ordered=1,2,3
+## 
+##  node number: 140 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=1,2,3
+##    vallmeret=2,3,4
+##    kor_csop=3,4,5
+##    vallmeret=1,2,3
 ##    ttip=1,3
 ## 
-##  node number: 133 
+##  node number: 141 
 ##    root
-##    exp_kib_class=1,3,4
 ##    kra_ordered=3,4
-##    vallmeret=1
-##    iskveg4_ordered=3,4
-##    iskveg4_ordered=4
-##    kollszerz=0
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=1,2,3
+##    vallmeret=2,3,4
+##    kor_csop=3,4,5
+##    vallmeret=1,2,3
 ##    ttip=2
 ## 
-##  node number: 145 
+##  node number: 214 
 ##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=1,2,3
-##    iskveg4_ordered=3,4
-##    kshreg_3=2
-## 
-##  node number: 146 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=1,2,3
-##    iskveg4_ordered=1,2
-##    szolgho_csop=1,2
-## 
-##  node number: 150 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=4
-##    szolgho_csop=1,2
-##    kor_csop=1,2
-## 
-##  node number: 151 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=4
+##    kra_ordered=1,2
 ##    szolgho_csop=1,2
 ##    kor_csop=3,4,5
-## 
-##  node number: 156 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=1,3
-##    kshreg_3=2,3
-##    vallmeret=1,2,3
-##    vallmeret=1,2
-## 
-##  node number: 157 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=1,3
-##    kshreg_3=2,3
-##    vallmeret=1,2,3
-##    vallmeret=3,4
-## 
-##  node number: 158 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=1,3
-##    kshreg_3=2,3
-##    vallmeret=4
-##    exp_kib_class=3
-## 
-##  node number: 159 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=1,3
-##    kshreg_3=2,3
-##    vallmeret=4
-##    exp_kib_class=1
-## 
-##  node number: 252 
-##    root
-##    exp_kib_class=2
-##    szolgho_csop=3,4
-##    kra_ordered=1,2
-##    kshreg_3=2,3
 ##    iskveg4_ordered=1,2,3
-##    vallmeret=3,4
+##    ttip=2,3
+##    vallmeret=2,3,4
 ##    iskveg4_ordered=1,2
 ## 
-##  node number: 253 
+##  node number: 215 
 ##    root
-##    exp_kib_class=2
-##    szolgho_csop=3,4
 ##    kra_ordered=1,2
-##    kshreg_3=2,3
+##    szolgho_csop=1,2
+##    kor_csop=3,4,5
 ##    iskveg4_ordered=1,2,3
-##    vallmeret=3,4
+##    ttip=2,3
+##    vallmeret=2,3,4
 ##    iskveg4_ordered=3,4
 ## 
-##  node number: 288 
+##  node number: 238 
 ##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=1,2,3
+##    kra_ordered=1,2
+##    szolgho_csop=3,4
+##    exp_kib_class=1,4
+##    vallmeret=4
+##    kor_csop=3,4,5
 ##    iskveg4_ordered=3,4
-##    kshreg_3=1,3
-##    vallmeret=1,2,3
+##    kra_ordered=2,3,4
 ## 
-##  node number: 294 
+##  node number: 246 
 ##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=1,2,3
-##    iskveg4_ordered=1,2
+##    kra_ordered=1,2
 ##    szolgho_csop=3,4
-##    ara_ordered=1,2,3
-## 
-##  node number: 295 
-##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=1,2,3
-##    iskveg4_ordered=1,2
-##    szolgho_csop=3,4
+##    exp_kib_class=2,3
+##    vallmeret=4
+##    kollszerz=1
 ##    ara_ordered=4
+##    szolgho_csop=1,2,3
 ## 
-##  node number: 578 
+##  node number: 247 
 ##    root
-##    exp_kib_class=1,3,4
-##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
-##    iskveg4_ordered=1,2,3
-##    iskveg4_ordered=3,4
-##    kshreg_3=1,3
+##    kra_ordered=1,2
+##    szolgho_csop=3,4
+##    exp_kib_class=2,3
 ##    vallmeret=4
-##    ara_ordered=1,2,3
+##    kollszerz=1
+##    ara_ordered=4
+##    szolgho_csop=4
 ## 
-##  node number: 579 
+##  node number: 284 
 ##    root
-##    exp_kib_class=1,3,4
 ##    kra_ordered=3,4
-##    vallmeret=2,3,4
-##    exp_kib_class=4
+##    exp_kib_class=1,3,4
 ##    iskveg4_ordered=1,2,3
-##    iskveg4_ordered=3,4
-##    kshreg_3=1,3
+##    vallmeret=2,3,4
+##    kor_csop=3,4,5
 ##    vallmeret=4
-##    ara_ordered=4</code></pre>
+##    ttip=1,2
+##    exp_kib_class=4
+## 
+##  node number: 285 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=1,2,3
+##    vallmeret=2,3,4
+##    kor_csop=3,4,5
+##    vallmeret=4
+##    ttip=1,2
+##    exp_kib_class=1,3
+## 
+##  node number: 286 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=1,2,3
+##    vallmeret=2,3,4
+##    kor_csop=3,4,5
+##    vallmeret=4
+##    ttip=3
+##    szolgho_csop=1
+## 
+##  node number: 478 
+##    root
+##    kra_ordered=1,2
+##    szolgho_csop=3,4
+##    exp_kib_class=1,4
+##    vallmeret=4
+##    kor_csop=3,4,5
+##    iskveg4_ordered=3,4
+##    kra_ordered=1
+##    szolgho_csop=4
+## 
+##  node number: 479 
+##    root
+##    kra_ordered=1,2
+##    szolgho_csop=3,4
+##    exp_kib_class=1,4
+##    vallmeret=4
+##    kor_csop=3,4,5
+##    iskveg4_ordered=3,4
+##    kra_ordered=1
+##    szolgho_csop=1,2,3
+## 
+##  node number: 574 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=1,2,3
+##    vallmeret=2,3,4
+##    kor_csop=3,4,5
+##    vallmeret=4
+##    ttip=3
+##    szolgho_csop=2,3,4
+##    ara_ordered=2,3,4
+## 
+##  node number: 575 
+##    root
+##    kra_ordered=3,4
+##    exp_kib_class=1,3,4
+##    iskveg4_ordered=1,2,3
+##    vallmeret=2,3,4
+##    kor_csop=3,4,5
+##    vallmeret=4
+##    ttip=3
+##    szolgho_csop=2,3,4
+##    ara_ordered=1</code></pre>
 <pre class="r"><code>saveRDS(CART_train_B_RF_female_ordered, 
-        &quot;./models/CART_2011.RData&quot;)</code></pre>
+        &quot;./models/CART_2014.RData&quot;)</code></pre>
 
 
 
