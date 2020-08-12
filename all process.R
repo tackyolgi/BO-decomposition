@@ -173,8 +173,27 @@ reduced_total_matrix<- reduced_total_matrix[-c(6, 10:15),]
 reduced_H_group_matrix<- reduced_H_group_matrix[-c(6, 10:15),]
 reduced_L_group_matrix<- reduced_L_group_matrix[-c(6, 10:15),]
 
+write.csv(reduced_total_matrix, "./results/reduced_total_matrix.csv")
+write.csv(reduced_H_group_matrix, "./results/reduced_H_group_matrix.csv")
+write.csv(reduced_L_group_matrix, "./results/reduced_L_group_matrix.csv")
 
-# further calculation in the excel file
+
+# table 10 about job vacancy and unemployment
+library(eurostat)
+job_vacancy <- get_eurostat("jvs_a_rate_r2", time_format = "num",
+                            filters = list(geo="HU", time=2008:2016, nace_r2="A-S",
+                                           sizeclas="TOTAL", unit="AVG_A"))
+unemployment <- get_eurostat("une_rt_a", time_format = "num",
+                             filters=list(geo="HU",time=2008:2016, 
+                                          age="Y15-74", sex="T", unit="PC_ACT"))
+unemp_job_vac <- left_join(unemployment, job_vacancy, by=c("time"= "time"))
+
+tiff("./results/figures/Fig10.tiff")
+ggplot(unemp_job_vac, aes(x=values.x, y=values.y, label=time))+
+  geom_path()+ylim(0,2)+xlim(0,12)+geom_text(size=3)+
+  xlab("")+ylab("")+theme(legend.title = element_blank())
+dev.off()
+
 # S1 figure
 source('./01_codes/02_estimations/rand_for14_2008_95.R')
 source('./01_codes/02_estimations/rand_for14_2009_95.R')
@@ -253,3 +272,4 @@ rmarkdown::render("./01_codes/03_carts/CARTs_2016.R",
 
 setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp")
 
+# further calculations in the excel file
