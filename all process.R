@@ -160,39 +160,19 @@ ggplot(pivot_feor, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
   theme(strip.background = element_rect(fill="white"))  
 dev.off()
 
-# CARTs for ws effect in each year
-source("./01_codes/03_carts/CARTs_2008.R")
-source("./01_codes/03_carts/CARTs_2009.R")
-source("./01_codes/03_carts/CARTs_2010.R")
-source("./01_codes/03_carts/CARTs_2011.R")
-source("./01_codes/03_carts/CARTs_2012.R")
-source("./01_codes/03_carts/CARTs_2013.R")
-source("./01_codes/03_carts/CARTs_2014.R")
-source("./01_codes/03_carts/CARTs_2015.R")
-source("./01_codes/03_carts/CARTs_2016.R")
 
-rmarkdown::render("./01_codes/03_carts/CARTs_2008.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2008.docx")
-rmarkdown::render("./01_codes/03_carts/CARTs_2009.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2009.docx")
-rmarkdown::render("./01_codes/03_carts/CARTs_2010.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2010.docx")
-rmarkdown::render("./01_codes/03_carts/CARTs_2011.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2011.docx")
-rmarkdown::render("./01_codes/03_carts/CARTs_2012.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2012.docx")
-rmarkdown::render("./01_codes/03_carts/CARTs_2013.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2013.docx")
-rmarkdown::render("./01_codes/03_carts/CARTs_2014.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2014.docx")
-rmarkdown::render("./01_codes/03_carts/CARTs_2015.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2015.docx")
-rmarkdown::render("./01_codes/03_carts/CARTs_2016.R", 
-                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2016.docx")
+# H* and L* characteristics - table 8-10
+source("./01_codes/03_carts/CARTs_groups.R")
 
+# leave out some variables
+reduced_total_matrix <- total_matrix
+reduced_H_group_matrix <- H_group_matrix
+reduced_L_group_matrix <- L_group_matrix
 
+reduced_total_matrix<- reduced_total_matrix[-c(6, 10:15),]
+reduced_H_group_matrix<- reduced_H_group_matrix[-c(6, 10:15),]
+reduced_L_group_matrix<- reduced_L_group_matrix[-c(6, 10:15),]
 
-setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp")
 
 # further calculation in the excel file
 # S1 figure
@@ -241,4 +221,35 @@ ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   theme(strip.background = element_rect(fill="white"))
 dev.off()
 
+# S2 - CARTs for ws effect in each year
+source("./01_codes/03_carts/CARTs_2008.R")
+source("./01_codes/03_carts/CARTs_2009.R")
+source("./01_codes/03_carts/CARTs_2010.R")
+source("./01_codes/03_carts/CARTs_2011.R")
+source("./01_codes/03_carts/CARTs_2012.R")
+source("./01_codes/03_carts/CARTs_2013.R")
+source("./01_codes/03_carts/CARTs_2014.R")
+source("./01_codes/03_carts/CARTs_2015.R")
+source("./01_codes/03_carts/CARTs_2016.R")
+
+rmarkdown::render("./01_codes/03_carts/CARTs_2008.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2008.doc")
+rmarkdown::render("./01_codes/03_carts/CARTs_2009.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2009.doc")
+rmarkdown::render("./01_codes/03_carts/CARTs_2010.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2010.doc")
+rmarkdown::render("./01_codes/03_carts/CARTs_2011.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2011.doc")
+rmarkdown::render("./01_codes/03_carts/CARTs_2012.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2012.doc")
+rmarkdown::render("./01_codes/03_carts/CARTs_2013.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2013.doc")
+rmarkdown::render("./01_codes/03_carts/CARTs_2014.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2014.doc")
+rmarkdown::render("./01_codes/03_carts/CARTs_2015.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2015.doc")
+rmarkdown::render("./01_codes/03_carts/CARTs_2016.R", 
+                  output_file = "C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp/results/CARTs/CARTs_2016.doc")
+
+setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/technical note/BO decomp")
 
