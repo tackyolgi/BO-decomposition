@@ -16,6 +16,23 @@ names(results_RF) <- c("year", "raw", "composition_effect",
 
 results_RF <- cbind(results_RF, dataset=rep(c("training", "test"), 9))
 
+# mse - figure 1
+source("./01_codes/02_estimations/mse.R")
+
+mse$Database <- factor(mse$Database, levels=c("Training sample",
+                                              "Test sample"))
+
+tiff(as.character("./results/figures/fig1.tiff"))
+ggplot(subset(mse, mse$Gender=="Females"), aes(x=Year, y=as.numeric(MSE), fill=Method))+
+  geom_bar(stat = "identity", width = 0.5)+
+  facet_grid(Database~Method)+labs(x="", y="")+
+  theme(legend.position = "none")+
+  theme(strip.text.x = element_text(size=12),
+        strip.text.y = element_text(size=12),
+        axis.text.x = element_text(size=12),
+        axis.text.y = element_text(size=12))
+dev.off()
+
 # table 3 and table 4 
 results_RF_training <- subset(results_RF, results_RF$dataset=="training")
 results_RF_test <- subset(results_RF, results_RF$dataset=="test")
@@ -23,7 +40,7 @@ results_RF_test <- subset(results_RF, results_RF$dataset=="test")
 write.csv(results_RF_training, "./results/results_RF_training.csv")
 write.csv(results_RF_test, "./results/results_RF_test.csv")
 
-# figure 1
+# figure 2
 results_RF <- mutate(results_RF, composition_percentage=composition_effect/raw*100)
 results_RF <- mutate(results_RF, ws_percentage=wage_structure_effect/raw*100)
 
@@ -37,7 +54,7 @@ results_RF_longer$dataset <- factor(results_RF_longer$dataset,
                                     c("training", "test"))
 panel_label <- c(training="A", test="B")
 
-tiff("./results/figures/Fig1.tiff")
+tiff("./results/figures/Fig2.tiff")
 ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   geom_bar(position="dodge", stat="identity")+
   scale_y_continuous(breaks=seq(-40, 140, 20))+
@@ -47,14 +64,14 @@ ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   theme(strip.background = element_rect(fill="white"))
 dev.off()
 
-# figure 2
+# figure 3
 results_RF_longer <- results_RF %>% pivot_longer(cols=c("wage_structure_effect", 
                                                         "raw"), names_to="raw_ws" )
 
 results_RF_longer$dataset <- factor(results_RF_longer$dataset,
                                     c("training", "test"))
 
-tiff("./results/figures/Fig2.tiff")
+tiff("./results/figures/Fig3.tiff")
 ggplot(results_RF_longer, aes(x=year, y=value, color=raw_ws))+
   geom_line()+
   facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
@@ -70,7 +87,7 @@ source('./01_codes/04_ws effects/diff_osszehasonlitas_iskveg.R')
 
 pivot_iskveg4$dataset <- factor(pivot_iskveg4$dataset,
                                     c("training", "test"))
-tiff("./results/figures/Fig3.tiff")
+tiff("./results/figures/Fig4.tiff")
 ggplot(pivot_iskveg4, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
   geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
@@ -83,7 +100,7 @@ source('./01_codes/04_ws effects/diff_osszehasonlitas_kor.R')
 
 pivot_kor$dataset <- factor(pivot_kor$dataset,
                             c("training", "test"))
-tiff("./results/figures/Fig4.tiff")
+tiff("./results/figures/Fig5.tiff")
 ggplot(pivot_kor, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
   geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
@@ -96,7 +113,7 @@ source('./01_codes/04_ws effects/diff_osszehasonlitas_szolgho.R')
 
 pivot_szolgho$dataset <- factor(pivot_szolgho$dataset,
                             c("training", "test"))
-tiff("./results/figures/Fig5.tiff")
+tiff("./results/figures/Fig6.tiff")
 ggplot(pivot_szolgho, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
   geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
@@ -109,7 +126,7 @@ source('./01_codes/04_ws effects/diff_osszehasonlitas_kra_4.R')
   
 pivot_kra$dataset <- factor(pivot_kra$dataset,
                               c("training", "test"))
-tiff("./results/figures/Fig6.tiff")
+tiff("./results/figures/Fig7.tiff")
 ggplot(pivot_kra, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
   geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
@@ -123,7 +140,7 @@ source('./01_codes/04_ws effects/diff_osszehasonlitas_ara_4.R')
   
 pivot_ara$dataset <- factor(pivot_ara$dataset,
                                 c("training", "test"))
-tiff("./results/figures/Fig7.tiff")
+tiff("./results/figures/Fig8.tiff")
 ggplot(pivot_ara, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
   geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
@@ -138,7 +155,7 @@ source('./01_codes/04_ws effects/diff_osszehasonlitas_nok_aranya.R')
 pivot_nok_aranya$dataset <- factor(pivot_nok_aranya$dataset,
                                 c("training", "test"))
 
-tiff("./results/figures/Fig8.tiff")
+tiff("./results/figures/Fig9.tiff")
 ggplot(pivot_nok_aranya, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
   geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
@@ -152,7 +169,7 @@ source('./01_codes/04_ws effects/diff_osszehasonlitas_feor.R')
 pivot_feor$dataset <- factor(pivot_feor$dataset,
                              c("training", "test"))
 
-tiff("./results/figures/Fig9.tiff")
+tiff("./results/figures/Fig10.tiff")
 ggplot(pivot_feor, aes(x=category, y=as.numeric(RF), group=year, color=year ))+
   geom_path()+facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
   xlab("")+ylab("")+labs(fill="")+ylim(0,0.25)+
@@ -166,16 +183,16 @@ source("./01_codes/03_carts/CARTs_groups.R")
 
 # leave out some variables
 reduced_total_matrix <- total_matrix
-reduced_H_group_matrix <- H_group_matrix
 reduced_L_group_matrix <- L_group_matrix
+reduced_S_group_matrix <- S_group_matrix
 
 reduced_total_matrix<- reduced_total_matrix[-c(6, 10:15),]
-reduced_H_group_matrix<- reduced_H_group_matrix[-c(6, 10:15),]
 reduced_L_group_matrix<- reduced_L_group_matrix[-c(6, 10:15),]
+reduced_S_group_matrix<- reduced_S_group_matrix[-c(6, 10:15),]
 
 write.csv(reduced_total_matrix, "./results/reduced_total_matrix.csv")
-write.csv(reduced_H_group_matrix, "./results/reduced_H_group_matrix.csv")
 write.csv(reduced_L_group_matrix, "./results/reduced_L_group_matrix.csv")
+write.csv(reduced_S_group_matrix, "./results/reduced_S_group_matrix.csv")
 
 
 # table 10 about job vacancy and unemployment
@@ -188,7 +205,7 @@ unemployment <- get_eurostat("une_rt_a", time_format = "num",
                                           age="Y15-74", sex="T", unit="PC_ACT"))
 unemp_job_vac <- left_join(unemployment, job_vacancy, by=c("time"= "time"))
 
-tiff("./results/figures/Fig10.tiff")
+tiff("./results/figures/Fig11.tiff")
 ggplot(unemp_job_vac, aes(x=values.x, y=values.y, label=time))+
   geom_path()+ylim(0,2)+xlim(0,12)+geom_text(size=3)+
   xlab("")+ylab("")+theme(legend.title = element_blank())

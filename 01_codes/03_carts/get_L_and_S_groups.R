@@ -1,10 +1,10 @@
-get_H_and_L_groups <- function(df) {
-  # H group
+get_L_and_S_groups <- function(df) {
+  # L group
   # Sector: Manufacturing, Region: transdanubian, 
   # property: foreign majority (1,2),
   # education: primary and lower secondary (1-2)
   
-  # L group:
+  # S group:
   # Region: central, Sector: not-manufacturing, firm size: 1-2
   # education: higher secondary and tertiary (3-4), 
   # no foreign property (4)
@@ -25,6 +25,6 @@ get_H_and_L_groups <- function(df) {
                             (df$iskveg4_ordered == 3 | df$iskveg4_ordered ==4)
   )
   
-  list(H_group=level_data_H1, L_group=level_data_L3)
+  list(L_group=level_data_H1, S_group=level_data_L3)
   
 }
