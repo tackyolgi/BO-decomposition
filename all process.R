@@ -226,29 +226,6 @@ ggplot(unemp_job_vac, aes(x=values.x, y=values.y, label=time))+
   theme(legend.title = element_blank())
 dev.off()
 
-# S1 figure
-source('./01_codes/02_estimations/rand_for14_2008_95.R')
-source('./01_codes/02_estimations/rand_for14_2009_95.R')
-source('./01_codes/02_estimations/rand_for14_2010_95.R')
-# rerun ols decomposition manually in 2010 
-source('./01_codes/02_estimations/rand_for14_2011_95.R')
-source('./01_codes/02_estimations/rand_for14_2012_95.R')
-source('./01_codes/02_estimations/rand_for14_2013_95.R')
-source('./01_codes/02_estimations/rand_for14_2014_95.R')
-source('./01_codes/02_estimations/rand_for14_2015_95.R') 
-source('./01_codes/02_estimations/rand_for14_2016_95.R')
-
-names(results_RF) <- c("year", "raw", "composition_effect",
-                       "wage_structure_effect", "bias")
-
-results_RF <- cbind(results_RF, dataset=rep(c("training", "test"), 9))
-
-# just in case table 3 and table 4 for reduced dataset
-results_RF_training <- subset(results_RF, results_RF$dataset=="training")
-results_RF_test <- subset(results_RF, results_RF$dataset=="test")
-
-write.csv(results_RF_training, "./results/results_RF_95_training.csv")
-write.csv(results_RF_test, "./results/results_RF_95_test.csv")
 
 # figure 2
 results_RF <- mutate(results_RF, composition_percentage=composition_effect/raw*100)
