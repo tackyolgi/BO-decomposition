@@ -43,6 +43,23 @@ write.csv(results_RF_training, "./results/results_RF_training.csv")
 write.csv(results_RF_test, "./results/results_RF_test.csv")
 
 # figure 2
+results_RF_longer <- results_RF %>% pivot_longer(cols=c("wage_structure_effect", 
+                                                        "raw"), names_to="raw_ws" )
+
+results_RF_longer$dataset <- factor(results_RF_longer$dataset,
+                                    c("training", "test"))
+
+tiff("./results/figures/Fig2.tiff",
+     width = 1750, height=1111, res=300)
+ggplot(results_RF_longer, aes(x=year, y=value, color=raw_ws))+
+  geom_line()+
+  facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
+  xlab("")+ylab("")+labs(fill="")+ylim(0, .17)+
+  theme(legend.title = element_blank())+
+  theme(strip.background = element_rect(fill="white"))
+dev.off()
+
+# figure 3
 results_RF <- mutate(results_RF, composition_percentage=composition_effect/raw*100)
 results_RF <- mutate(results_RF, ws_percentage=wage_structure_effect/raw*100)
 
@@ -56,7 +73,7 @@ results_RF_longer$dataset <- factor(results_RF_longer$dataset,
                                     c("training", "test"))
 panel_label <- c(training="A", test="B")
 
-tiff("./results/figures/Fig2.tiff", 
+tiff("./results/figures/Fig3.tiff", 
      width = 1900, height=1111, res=300)
 ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   geom_bar(position="dodge", stat="identity")+
@@ -64,23 +81,6 @@ ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ 
   theme(legend.position = "bottom")+
   xlab("")+ylab("")+
-  theme(legend.title = element_blank())+
-  theme(strip.background = element_rect(fill="white"))
-dev.off()
-
-# figure 3
-results_RF_longer <- results_RF %>% pivot_longer(cols=c("wage_structure_effect", 
-                                                        "raw"), names_to="raw_ws" )
-
-results_RF_longer$dataset <- factor(results_RF_longer$dataset,
-                                    c("training", "test"))
-
-tiff("./results/figures/Fig3.tiff",
-     width = 1750, height=1111, res=300)
-ggplot(results_RF_longer, aes(x=year, y=value, color=raw_ws))+
-  geom_line()+
-  facet_grid(.~dataset, labeller=labeller(dataset=panel_label))+ theme(legend.position = "bottom")+
-  xlab("")+ylab("")+labs(fill="")+ylim(0, .17)+
   theme(legend.title = element_blank())+
   theme(strip.background = element_rect(fill="white"))
 dev.off()
@@ -273,7 +273,7 @@ ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   theme(strip.background = element_rect(fill="white"))
 dev.off()
 
-# S2 - CARTs for ws effect in each year
+# CARTs for ws effect in each year and S4 tables
 source("./01_codes/03_carts/CARTs_2008.R")
 source("./01_codes/03_carts/CARTs_2009.R")
 source("./01_codes/03_carts/CARTs_2010.R")

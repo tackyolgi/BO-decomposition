@@ -43,9 +43,9 @@ pivot_nok_aranya[1:categories,3:4] <- as.matrix(aggregate(minta$train$pred_diff_
                                                             list(minta$train$nok_aranya_csop), mean))
 pivot_nok_aranya[1:categories,5] <- as.matrix(table(minta$train$nok_aranya_csop))
 
-pivot_nok_aranya[(categories*3+1):(categories*3+categories),3:4] <- as.matrix(aggregate(minta$train$pred_diff_B_RF_ordered, 
-                                                          list(minta$train$nok_aranya_csop), mean))
-pivot_nok_aranya[(categories*3+1):(categories*3+categories),5] <- as.matrix(table(minta$train$nok_aranya_csop))
+pivot_nok_aranya[(categories*3+1):(categories*3+categories),3:4] <- as.matrix(aggregate(minta$test$pred_diff_B_RF_ordered, 
+                                                          list(minta$test$nok_aranya_csop), mean))
+pivot_nok_aranya[(categories*3+1):(categories*3+categories),5] <- as.matrix(table(minta$test$nok_aranya_csop))
 
 
 minta <- readRDS("./data/minta_2012.RData")
@@ -78,9 +78,9 @@ pivot_nok_aranya[(categories+1):(2*categories),3:4] <- as.matrix(aggregate(minta
                                                           list(minta$train$nok_aranya_csop), mean))
 pivot_nok_aranya[(categories+1):(2*categories),5] <- as.matrix(table(minta$train$nok_aranya_csop))
 
-pivot_nok_aranya[(categories*4+1):(categories*4+categories),3:4] <- as.matrix(aggregate(minta$train$pred_diff_B_RF_ordered, 
-                                                                                        list(minta$train$nok_aranya_csop), mean))
-pivot_nok_aranya[(categories*4+1):(categories*4+categories),5] <- as.matrix(table(minta$train$nok_aranya_csop))
+pivot_nok_aranya[(categories*4+1):(categories*4+categories),3:4] <- as.matrix(aggregate(minta$test$pred_diff_B_RF_ordered, 
+                                                                                        list(minta$test$nok_aranya_csop), mean))
+pivot_nok_aranya[(categories*4+1):(categories*4+categories),5] <- as.matrix(table(minta$test$nok_aranya_csop))
 
 
 
@@ -114,9 +114,9 @@ pivot_nok_aranya[(2*categories+1):(3*categories),3:4] <- as.matrix(aggregate(min
                                                                            list(minta$train$nok_aranya_csop), mean))
 pivot_nok_aranya[(2*categories+1):(3*categories),5] <- as.matrix(table(minta$train$nok_aranya_csop))
 
-pivot_nok_aranya[(categories*5+1):(categories*5+categories),3:4] <- as.matrix(aggregate(minta$train$pred_diff_B_RF_ordered, 
-                                                                                        list(minta$train$nok_aranya_csop), mean))
-pivot_nok_aranya[(categories*5+1):(categories*5+categories),5] <- as.matrix(table(minta$train$nok_aranya_csop))
+pivot_nok_aranya[(categories*5+1):(categories*5+categories),3:4] <- as.matrix(aggregate(minta$test$pred_diff_B_RF_ordered, 
+                                                                                        list(minta$test$nok_aranya_csop), mean))
+pivot_nok_aranya[(categories*5+1):(categories*5+categories),5] <- as.matrix(table(minta$test$nok_aranya_csop))
 
 
 pivot_nok_aranya[, 4] <- as.numeric(pivot_nok_aranya[, 4])
