@@ -273,7 +273,7 @@ ggplot(results_RF_longer, aes(x=year, y=value, fill=effects))+
   theme(strip.background = element_rect(fill="white"))
 dev.off()
 
-# CARTs for ws effect in each year and S4 tables
+# CARTs for ws effect in each year and S3-S4 appendix
 source("./01_codes/03_carts/CARTs_2008.R")
 source("./01_codes/03_carts/CARTs_2009.R")
 source("./01_codes/03_carts/CARTs_2010.R")

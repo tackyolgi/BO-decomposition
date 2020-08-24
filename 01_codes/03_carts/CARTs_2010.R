@@ -37,6 +37,11 @@ CART_train_B_RF_female_ordered <- rpart(pred_diff_B_RF_ordered~iskveg4_ordered  
                                              ), model=TRUE)
 CART_train_B_RF_female_ordered
 
+tiff(as.character("./results/figures/cart_cp_2010.tiff"), 
+     width = 1200, height=1200, res=300)
+plotcp(CART_train_B_RF_female_ordered)
+dev.off()
+
 cart_path <- path.rpart(CART_train_B_RF_female_ordered, nodes=names(table(leaf.numbers(CART_train_B_RF_female_ordered))))
 
 saveRDS(CART_train_B_RF_female_ordered, 

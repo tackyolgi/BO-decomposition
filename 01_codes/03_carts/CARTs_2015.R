@@ -24,6 +24,11 @@ CART_train_B_RF_female_ordered <- rpart(pred_diff_B_RF_ordered~iskveg4_ordered  
                                         ), model=TRUE)
 CART_train_B_RF_female_ordered
 
+tiff(as.character("./results/figures/cart_cp_2015.tiff"), 
+     width = 1200, height=1200, res=300)
+plotcp(CART_train_B_RF_female_ordered)
+dev.off()
+
 cp_value <- 0.001 
 minbuck_value <- 100
 
