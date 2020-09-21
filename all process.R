@@ -252,6 +252,17 @@ dev.off()
 
 # CARTs for ws effect in each year and S3-S4 appendix
 source("./01_codes/03_carts/CARTs_2008.R")
+
+error_rate <- as.data.frame(model$err.rate)
+
+jpeg(as.character("./results/figures/erfemale2008.jpg"), 
+     width = 1200, height=1200, res=300)
+ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  theme(axis.title.x = element_text(size=12))
+dev.off()
+
+
 source("./01_codes/03_carts/CARTs_2009.R")
 source("./01_codes/03_carts/CARTs_2010.R")
 source("./01_codes/03_carts/CARTs_2011.R")
@@ -293,7 +304,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2008.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -304,7 +315,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2008.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -316,7 +327,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2009.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -327,7 +338,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2009.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -339,7 +350,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2010.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -350,7 +361,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2010.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -362,7 +373,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2011.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -373,7 +384,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2011.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -385,7 +396,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2012.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -396,7 +407,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2012.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -408,7 +419,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2013.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -419,7 +430,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2013.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -431,7 +442,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2014.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -442,7 +453,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2014.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -454,7 +465,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2015.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -465,7 +476,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2015.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -477,7 +488,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/erfemale2016.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -488,7 +499,7 @@ error_rate <- as.data.frame(model$err.rate)
 jpeg(as.character("./results/figures/ermale2016.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
+  geom_line()+ labs(x="Forest size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
