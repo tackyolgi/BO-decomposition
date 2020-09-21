@@ -24,6 +24,20 @@ CART_train_B_RF_female_ordered <- rpart(pred_diff_B_RF_ordered~iskveg4_ordered  
                                         ), model=TRUE)
 CART_train_B_RF_female_ordered
 
+rel_error_rate <- CART_train_B_RF_female_ordered$cptable[, 2:3]
+rel_error_rate[,1] <- as.numeric(rel_error_rate[, 1])
+rel_error_rate[,2] <- as.numeric(rel_error_rate[, 2])
+rel_error_rate <- as.data.frame(rel_error_rate)
+names(rel_error_rate) <- c("nsplits", "rel_error")
+
+jpeg(as.character("./results/figures/rerfemale2010.jpg"), 
+     width = 1200, height=1200, res=300)
+ggplot(rel_error_rate, aes(y=rel_error, x=nsplits))+
+  geom_line()+ labs(x="Number of splits", y="Relative error")+
+  theme(axis.title.x = element_text(size=12))
+dev.off()
+
+
 cp_value <- 0.001 
 minbuck_value <- 100
 
@@ -37,10 +51,6 @@ CART_train_B_RF_female_ordered <- rpart(pred_diff_B_RF_ordered~iskveg4_ordered  
                                              ), model=TRUE)
 CART_train_B_RF_female_ordered
 
-tiff(as.character("./results/figures/cart_cp_2010.tiff"), 
-     width = 1200, height=1200, res=300)
-plotcp(CART_train_B_RF_female_ordered)
-dev.off()
 
 cart_path <- path.rpart(CART_train_B_RF_female_ordered, nodes=names(table(leaf.numbers(CART_train_B_RF_female_ordered))))
 
