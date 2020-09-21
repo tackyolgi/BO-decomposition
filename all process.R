@@ -284,16 +284,16 @@ setwd("C:/Users/tacky/OneDrive - Corvinus University of Budapest/phd/research/te
 
 # further calculations in the excel file
 
-# S? - obb error tables
+# S2 - obb error tables
 # 2008
 model <- readRDS("./models/B_RF_female_ordered_2008.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2008.tiff"), 
+jpeg(as.character("./results/figures/erfemale2008.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -301,10 +301,10 @@ model <- readRDS("./models/B_RF_male_ordered_2008.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2008.tiff"), 
+jpeg(as.character("./results/figures/ermale2008.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -313,10 +313,10 @@ model <- readRDS("./models/B_RF_female_ordered_2009.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2009.tiff"), 
+jpeg(as.character("./results/figures/erfemale2009.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -324,10 +324,10 @@ model <- readRDS("./models/B_RF_male_ordered_2009.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2009.tiff"), 
+jpeg(as.character("./results/figures/ermale2009.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -336,10 +336,10 @@ model <- readRDS("./models/B_RF_female_ordered_2010.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2010.tiff"), 
+jpeg(as.character("./results/figures/erfemale2010.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -347,10 +347,10 @@ model <- readRDS("./models/B_RF_male_ordered_2010.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2010.tiff"), 
+jpeg(as.character("./results/figures/ermale2010.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -359,10 +359,10 @@ model <- readRDS("./models/B_RF_female_ordered_2011.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2011.tiff"), 
+jpeg(as.character("./results/figures/erfemale2011.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -370,10 +370,10 @@ model <- readRDS("./models/B_RF_male_ordered_2011.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2011.tiff"), 
+jpeg(as.character("./results/figures/ermale2011.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -382,10 +382,10 @@ model <- readRDS("./models/B_RF_female_ordered_2012.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2012.tiff"), 
+jpeg(as.character("./results/figures/erfemale2012.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -393,10 +393,10 @@ model <- readRDS("./models/B_RF_male_ordered_2012.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2012.tiff"), 
+jpeg(as.character("./results/figures/ermale2012.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -405,10 +405,10 @@ model <- readRDS("./models/B_RF_female_ordered_2013.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2013.tiff"), 
+jpeg(as.character("./results/figures/erfemale2013.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -416,10 +416,10 @@ model <- readRDS("./models/B_RF_male_ordered_2013.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2013.tiff"), 
+jpeg(as.character("./results/figures/ermale2013.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -428,10 +428,10 @@ model <- readRDS("./models/B_RF_female_ordered_2014.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2014.tiff"), 
+jpeg(as.character("./results/figures/erfemale2014.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -439,10 +439,10 @@ model <- readRDS("./models/B_RF_male_ordered_2014.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2014.tiff"), 
+jpeg(as.character("./results/figures/ermale2014.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -451,10 +451,10 @@ model <- readRDS("./models/B_RF_female_ordered_2015.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2015.tiff"), 
+jpeg(as.character("./results/figures/erfemale2015.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -462,10 +462,10 @@ model <- readRDS("./models/B_RF_male_ordered_2015.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2015.tiff"), 
+jpeg(as.character("./results/figures/ermale2015.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -474,10 +474,10 @@ model <- readRDS("./models/B_RF_female_ordered_2016.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_female_2016.tiff"), 
+jpeg(as.character("./results/figures/erfemale2016.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
@@ -485,10 +485,10 @@ model <- readRDS("./models/B_RF_male_ordered_2016.RData")
 
 error_rate <- as.data.frame(model$err.rate)
 
-tiff(as.character("./results/figures/error_rate_male_2016.tiff"), 
+jpeg(as.character("./results/figures/ermale2016.jpg"), 
      width = 1200, height=1200, res=300)
 ggplot(error_rate, aes(y=model$err.rate, x=seq(1:1000)))+
-  geom_line()+ labs(x="", y="")+
+  geom_line()+ labs(x="Tree size", y="OBB prediction error")+
   theme(axis.title.x = element_text(size=12))
 dev.off()
 
