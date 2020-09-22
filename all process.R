@@ -22,17 +22,31 @@ source("./01_codes/02_estimations/mse.R")
 mse$Database <- factor(mse$Database, levels=c("Training sample",
                                               "Test sample"))
 library(tidyverse)
+library(ggplot2)
+library(gridExtra)
 
-tiff(as.character("./results/figures/fig1.tiff"), 
-     width = 1750, height=1111, res=300)
-ggplot(subset(mse, mse$Gender=="Females"), aes(x=Year, y=as.numeric(MSE), fill=Method))+
+
+females<-ggplot(subset(mse, mse$Gender=="Females"), aes(x=as.character(Year), y=as.numeric(MSE), fill=Method))+
   geom_bar(stat = "identity", width = 0.5)+
   facet_grid(Database~Method)+labs(x="", y="")+
   theme(legend.position = "none")+
   theme(strip.text.x = element_text(size=8),
         strip.text.y = element_text(size=8),
         axis.text.x = element_text(size=8),
-        axis.text.y = element_text(size=8))
+        axis.text.y = element_text(size=8))+
+  ggtitle("A")
+males<-ggplot(subset(mse, mse$Gender=="Males"), aes(x=as.character(Year), y=as.numeric(MSE), fill=Method))+
+  geom_bar(stat = "identity", width = 0.5)+
+  facet_grid(Database~Method)+labs(x="", y="")+
+  theme(legend.position = "none")+
+  theme(strip.text.x = element_text(size=8),
+        strip.text.y = element_text(size=8),
+        axis.text.x = element_text(size=8),
+        axis.text.y = element_text(size=8))+
+  ggtitle("B")
+tiff(as.character("./results/figures/fig1.tiff"), 
+     width = 2250, height=2500, res=300)
+grid.arrange(females, males)
 dev.off()
 
 # table 3 and table 4 
